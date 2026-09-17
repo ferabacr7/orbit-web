@@ -15,67 +15,88 @@ import {
   Hammer,
 } from "lucide-react";
 import { useRef, useState } from "react";
+import Image from "next/image";
 
-const services = [
+import type { LucideIcon } from "lucide-react";
+
+type Service = {
+  name: string;
+  description: string;
+  Icon: LucideIcon;
+  className: string;
+  image?: string;
+};
+
+const services: Service[] = [
   {
     name: "Mechanics",
     description: "Keep moving.",
     Icon: Wrench,
     className: "service-mechanic",
+    image: "/images/services/mechanics.png",
   },
   {
     name: "Restaurants",
     description: "Good food, local people.",
     Icon: Utensils,
     className: "service-food",
+    image: "/images/services/restaurants.png",
   },
   {
     name: "Tours & Activities",
     description: "Explore Guanacaste.",
     Icon: Waves,
     className: "service-tour",
+    image: "/images/services/tours-activities.png",
   },
   {
     name: "Delivery",
     description: "From here to you.",
     Icon: Box,
     className: "service-delivery",
+    image: "/images/services/delivery.png",
   },
   {
     name: "Pharmacies",
     description: "Health, closer to you.",
     Icon: Cross,
     className: "service-pharmacy",
+    image: "/images/services/pharmacies.png",
   },
   {
     name: "A/C Services",
     description: "Stay comfortable.",
     Icon: Snowflake,
     className: "service-ac",
+    image: "/images/services/ac-services.png",
   },
   {
     name: "Pools",
     description: "Care for your pool.",
     Icon: Droplets,
     className: "service-pools",
+    image: "/images/services/pools.png",
   },
   {
     name: "Handyman",
     description: "Help around your home.",
     Icon: Hammer,
     className: "service-handyman",
+    image: "/images/services/handyman.png",
   },
   {
     name: "Barbers & Personal Care",
     description: "Look and feel your best.",
     Icon: Scissors,
     className: "service-personal-care",
+    image: "/images/services/barbers-personal-care.png",
   },
   {
     name: "Pet Care",
     description: "For happy companions.",
     Icon: PawPrint,
     className: "service-pet",
+    image: "/images/services/pet-care.png",
   },
 ];
 
@@ -167,7 +188,7 @@ export function ServiceCategories() {
               {/* CENTERED TRACK */}
               <div className="mx-auto flex w-max min-w-full snap-x snap-mandatory items-end justify-center gap-2 px-16">
                 {services.map(
-                  ({ name, description, Icon, className }, index) => {
+                  ({ name, description, Icon, className, image }, index) => {
                     const isActive = activeIndex === index;
 
                     return (
@@ -183,7 +204,17 @@ export function ServiceCategories() {
                           isActive ? "service-card-active" : "",
                         ].join(" ")}
                       >
-                        <div className="service-card-image absolute inset-0" />
+                        <div className="service-card-image absolute inset-0">
+                          {image && (
+                            <Image
+                              src={image}
+                              alt=""
+                              fill
+                              sizes="(max-width: 768px) 70vw, 180px"
+                              className="object-cover"
+                            />
+                          )}
+                        </div>
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
