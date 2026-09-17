@@ -79,12 +79,24 @@ const services = [
   },
 ];
 
+const locations = [
+  "Las Catalinas",
+  "Playa Potrero",
+  "Flamingo",
+  "Brasilito",
+  "Huacas",
+];
+
 export function ServiceCategories() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const scroll = (direction: "left" | "right") => {
-    scrollRef.current?.scrollBy({
+    const container = scrollRef.current;
+
+    if (!container) return;
+
+    container.scrollBy({
       left: direction === "right" ? 520 : -520,
       behavior: "smooth",
     });
@@ -94,163 +106,151 @@ export function ServiceCategories() {
     setActiveIndex(index);
 
     const container = scrollRef.current;
-    const card = container?.children[index] as HTMLElement | undefined;
+    const track = container?.firstElementChild as HTMLElement | null;
+    const card = track?.children[index] as HTMLElement | undefined;
 
     if (!container || !card) return;
 
     const containerRect = container.getBoundingClientRect();
     const cardRect = card.getBoundingClientRect();
 
-    if (cardRect.right > containerRect.right - 24) {
+    if (cardRect.right > containerRect.right - 72) {
       container.scrollBy({
-        left: cardRect.right - containerRect.right + 90,
+        left: cardRect.right - containerRect.right + 110,
         behavior: "smooth",
       });
     }
 
-    if (cardRect.left < containerRect.left + 24) {
+    if (cardRect.left < containerRect.left + 72) {
       container.scrollBy({
-        left: cardRect.left - containerRect.left - 90,
+        left: cardRect.left - containerRect.left - 110,
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <section className="overflow-hidden pb-20" aria-labelledby="services-title">
-      <div className="mx-auto max-w-[1440px]">
-        <div className="mb-7 flex items-end justify-between px-6 lg:px-12">
-          <div>
-            <p className="eyebrow text-black/50">Explore locally</p>
-
+    <section
+      className="services-section overflow-hidden pb-20"
+      aria-labelledby="services-title"
+    >
+      <div className="mx-auto max-w-[1440px] px-6 pt-14 lg:px-12">
+        <div className="services-panel overflow-hidden">
+          {/* HEADER */}
+          <div className="px-8 pb-7 pt-8 lg:px-14">
             <h2
               id="services-title"
-              className="mt-2 font-editorial text-4xl tracking-[-0.035em] md:text-5xl"
+              className="font-editorial text-3xl tracking-[-0.035em]"
             >
-              Explore our services
+              Explore locally
             </h2>
           </div>
 
-          <div className="hidden items-center gap-3 md:flex">
+          {/* SERVICES CAROUSEL */}
+          <div className="relative">
+            {/* LEFT ARROW */}
             <button
               type="button"
               onClick={() => scroll("left")}
               aria-label="Previous services"
-              className="service-arrow"
+              className="absolute left-4 top-1/2 z-30 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/35 text-white backdrop-blur-md transition duration-300 hover:border-white/70 hover:bg-white hover:text-black"
             >
-              <ArrowLeft size={19} />
+              <ArrowLeft size={17} strokeWidth={1.7} />
             </button>
 
+            {/* SCROLLABLE VIEWPORT */}
+            <div
+              ref={scrollRef}
+              className="service-scroll overflow-x-auto pb-7"
+              onMouseLeave={() => setActiveIndex(null)}
+            >
+              {/* CENTERED TRACK */}
+              <div className="mx-auto flex w-max min-w-full snap-x snap-mandatory items-end justify-center gap-2 px-16">
+                {services.map(
+                  ({ name, description, Icon, className }, index) => {
+                    const isActive = activeIndex === index;
+
+                    return (
+                      <article
+                        key={name}
+                        tabIndex={0}
+                        onMouseEnter={() => revealCard(index)}
+                        onFocus={() => revealCard(index)}
+                        onBlur={() => setActiveIndex(null)}
+                        className={[
+                          "service-card group relative shrink-0 snap-start overflow-hidden",
+                          className,
+                          isActive ? "service-card-active" : "",
+                        ].join(" ")}
+                      >
+                        <div className="service-card-image absolute inset-0" />
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+                        <div className="absolute inset-x-0 bottom-0 z-10 px-3 pb-8 text-center text-white">
+                          <Icon
+                            size={24}
+                            strokeWidth={1.6}
+                            aria-hidden="true"
+                            className="service-icon mx-auto"
+                          />
+
+                          <h3 className="mx-auto mt-4 max-w-[180px] text-xs font-semibold uppercase leading-5 tracking-[0.14em]">
+                            {name}
+                          </h3>
+
+                          <div
+                            className={[
+                              "service-description overflow-hidden",
+                              isActive ? "service-description-active" : "",
+                            ].join(" ")}
+                          >
+                            <p className="pt-2 text-sm text-white/70">
+                              {description}
+                            </p>
+
+                            <span className="mt-3 inline-flex items-center gap-2 text-xs font-medium">
+                              Explore
+                              <ArrowRight size={14} />
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    );
+                  },
+                )}
+              </div>
+            </div>
+
+            {/* RIGHT ARROW */}
             <button
               type="button"
               onClick={() => scroll("right")}
               aria-label="Next services"
-              className="service-arrow"
+              className="absolute right-4 top-1/2 z-30 flex size-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/35 text-white backdrop-blur-md transition duration-300 hover:border-white/70 hover:bg-white hover:text-black"
             >
-              <ArrowRight size={19} />
+              <ArrowRight size={17} strokeWidth={1.7} />
             </button>
           </div>
-        </div>
 
-        <div
-          ref={scrollRef}
-          className="service-scroll flex snap-x snap-mandatory gap-2 overflow-x-auto px-6 pb-7 lg:px-12"
-          onMouseLeave={() => setActiveIndex(null)}
-        >
-          {services.map(
-            ({ name, description, Icon, className }, index) => {
-              const isActive = activeIndex === index;
+          {/* LOCATIONS */}
+          <div className="px-8 pb-8 pt-2 lg:px-14">
+            <div className="flex items-center justify-between gap-4">
+              {locations.map((location, index) => (
+                <div key={location} className="contents">
+                  <span className="shrink-0 text-center text-[10px] font-medium uppercase tracking-[0.2em] text-white/70">
+                    {location}
+                  </span>
 
-              return (
-                <article
-                  key={name}
-                  tabIndex={0}
-                  onMouseEnter={() => revealCard(index)}
-                  onFocus={() => revealCard(index)}
-                  onBlur={() => setActiveIndex(null)}
-                  className={[
-                    "service-card group relative shrink-0 snap-start overflow-hidden",
-                    className,
-                    isActive ? "service-card-active" : "",
-                  ].join(" ")}
-                >
-                  <div className="service-card-image absolute inset-0" />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                  <div className="absolute inset-x-0 bottom-0 z-10 px-5 pb-12 text-center text-white">
-                    <Icon
-                      size={28}
-                      strokeWidth={1.6}
+                  {index !== locations.length - 1 && (
+                    <span
+                      className="h-px min-w-6 flex-1 bg-white/25"
                       aria-hidden="true"
-                      className="service-icon mx-auto"
                     />
-
-                    <h3 className="mt-4 max-w-[180px] text-xs font-semibold uppercase leading-5 tracking-[0.14em]">
-                      {name}
-                    </h3>
-
-                    <div
-                      className={[
-                        "service-description overflow-hidden",
-                        isActive ? "service-description-active" : "",
-                      ].join(" ")}
-                    >
-                      <p className="pt-2 text-sm text-white/70">
-                        {description}
-                      </p>
-
-                      <span className="mt-3 inline-flex items-center gap-2 text-xs font-medium">
-                        Explore
-                        <ArrowRight size={14} />
-                      </span>
-                    </div>
-                  </div>
-                </article>
-              );
-            },
-          )}
-        </div>
-
-        <div className="grid items-center gap-5 px-6 lg:grid-cols-[auto_1fr_auto_1fr_auto] lg:px-12">
-          <div className="flex items-center gap-3">
-            <span className="relative size-6 rounded-full border border-black/70">
-              <span className="absolute left-[3px] top-[3px] size-2 rounded-full bg-orbit-orange" />
-            </span>
-
-            <span className="text-[10px] uppercase tracking-[0.28em]">
-              10 Services
-            </span>
-          </div>
-
-          <div className="hidden h-px bg-black/25 lg:block" />
-
-          <span className="hidden text-center text-[10px] uppercase leading-5 tracking-[0.28em] text-black/55 lg:block">
-            All you need
-            <br />
-            in Guanacaste
-          </span>
-
-          <div className="hidden h-px bg-black/25 lg:block" />
-
-          <div className="flex items-center gap-3 lg:hidden">
-            <button
-              type="button"
-              onClick={() => scroll("left")}
-              aria-label="Previous services"
-              className="service-arrow"
-            >
-              <ArrowLeft size={18} />
-            </button>
-
-            <button
-              type="button"
-              onClick={() => scroll("right")}
-              aria-label="Next services"
-              className="service-arrow"
-            >
-              <ArrowRight size={18} />
-            </button>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
