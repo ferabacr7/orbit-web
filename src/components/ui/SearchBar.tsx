@@ -1,6 +1,9 @@
 import { ArrowRight, Search } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function SearchBar() {
+  const t = useTranslations("SearchBar");
+
   return (
     <form
       role="search"
@@ -10,14 +13,14 @@ export function SearchBar() {
 
       <input
         type="search"
-        aria-label="Search local services"
-        placeholder="What do you need today?"
+        aria-label={t("inputLabel")}
+        placeholder={t("placeholder")}
         className="min-w-0 flex-1 bg-transparent px-4 text-sm outline-none placeholder:text-black/50"
       />
 
       <button
         type="submit"
-        aria-label="Search"
+        aria-label={t("submitLabel")}
         className="flex size-11 shrink-0 items-center justify-center rounded-full bg-orbit-orange text-white transition-transform hover:scale-105"
       >
         <ArrowRight size={19} />

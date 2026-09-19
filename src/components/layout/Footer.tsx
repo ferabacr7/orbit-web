@@ -1,26 +1,72 @@
-import Link from "next/link";
+import Image from "next/image";
+import { Mail } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { getTranslations } from "next-intl/server";
 
-export function Footer() {
+import { Link } from "@/i18n/navigation";
+
+export async function Footer() {
+  const t = await getTranslations("Footer");
+
   return (
     <footer className="bg-orbit-black text-white">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-8 px-6 py-10 md:flex-row md:items-center md:justify-between lg:px-12">
-        <Link
-          href="/"
-          className="text-xl font-semibold tracking-[.18em]"
-          aria-label="ORBIT home"
-        >
-          <span className="text-orbit-orange">O</span>RBIT
-        </Link>
+      <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
+        <div className="grid min-h-[130px] items-center gap-8 py-7 md:grid-cols-[1fr_auto_1fr]">
+          {/* LOGO */}
+          <div className="flex justify-center md:justify-start">
+            <Link href="/" aria-label={t("homeLabel")} className="inline-flex">
+              <Image
+                src="/images/letra.jpg"
+                alt="ORBIT"
+                width={190}
+                height={60}
+                className="h-auto w-[160px] object-contain"
+              />
+            </Link>
+          </div>
 
-        <nav className="flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/65">
-          <Link href="/services">Services</Link>
-          <Link href="/for-businesses">For Businesses</Link>
-          <Link href="/about">About</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/terms">Terms</Link>
-        </nav>
+          {/* SOCIAL / CONTACT */}
+          <div className="flex items-center justify-center gap-3">
+            <a
+              href="#"
+              aria-label={t("instagram")}
+              className="flex size-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition hover:border-orbit-orange hover:bg-orbit-orange hover:text-white"
+            >
+              <FaInstagram size={17} />
+            </a>
 
-        <span className="text-xs text-white/45">Guanacaste, Costa Rica</span>
+            <a
+              href="#"
+              aria-label={t("facebook")}
+              className="flex size-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition hover:border-orbit-orange hover:bg-orbit-orange hover:text-white"
+            >
+              <FaFacebookF size={16} />
+            </a>
+
+            <a
+              href="#"
+              aria-label={t("email")}
+              className="flex size-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition hover:border-orbit-orange hover:bg-orbit-orange hover:text-white"
+            >
+              <Mail size={17} strokeWidth={1.7} />
+            </a>
+
+            <a
+              href="#"
+              aria-label={t("whatsapp")}
+              className="flex size-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition hover:border-orbit-orange hover:bg-orbit-orange hover:text-white"
+            >
+              <FaWhatsapp size={18} />
+            </a>
+          </div>
+
+          {/* LOCATION */}
+          <div className="text-center md:text-right">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">
+              {t("location")}
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   );

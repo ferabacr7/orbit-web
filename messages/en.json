@@ -1,0 +1,132 @@
+{
+  "Navbar": {
+    "homeLabel": "ORBIT home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "exploreOrbit": "Explore ORBIT",
+    "services": "Services",
+    "forBusinesses": "For Businesses",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "guanacaste": "Guanacaste",
+    "costaRica": "Costa Rica"
+  },
+  "Hero": {
+    "eyebrow": "Local people. Real solutions.",
+    "titleLine1": "Guanacaste",
+    "titleConnector": "in",
+    "titleHighlight": "one place.",
+    "description": "Find trusted local services, businesses and experiences all around you.",
+    "quickLinks": {
+      "restaurants": "Restaurants",
+      "mechanics": "Mechanics",
+      "tours": "Tours",
+      "pharmacies": "Pharmacies",
+      "more": "More"
+    }
+  },
+  "SearchBar": {
+    "inputLabel": "Search local services",
+    "placeholder": "What do you need today?",
+    "submitLabel": "Search"
+  },
+  "ServiceCategories": {
+    "title": "Explore locally",
+    "explore": "Explore",
+    "previous": "Previous services",
+    "next": "Next services",
+    "services": {
+      "mechanics": {
+        "name": "Mechanics",
+        "description": "Keep moving."
+      },
+      "restaurants": {
+        "name": "Restaurants",
+        "description": "Good food, local people."
+      },
+      "tours": {
+        "name": "Tours & Activities",
+        "description": "Explore Guanacaste."
+      },
+      "delivery": {
+        "name": "Delivery",
+        "description": "From here to you."
+      },
+      "pharmacies": {
+        "name": "Pharmacies",
+        "description": "Health, closer to you."
+      },
+      "ac": {
+        "name": "A/C Services",
+        "description": "Stay comfortable."
+      },
+      "pools": {
+        "name": "Pools",
+        "description": "Care for your pool."
+      },
+      "handyman": {
+        "name": "Handyman",
+        "description": "Help around your home."
+      },
+      "personalCare": {
+        "name": "Barbers & Personal Care",
+        "description": "Look and feel your best."
+      },
+      "petCare": {
+        "name": "Pet Care",
+        "description": "For happy companions."
+      }
+    }
+  },
+  "ProviderCTA": {
+    "eyebrow": "FOR PROVIDERS",
+    "titleLine1": "More visibility.",
+    "titleLine2": "More",
+    "titleHighlight": "opportunities.",
+    "description": "Join ORBIT and connect with people already looking for local services in Guanacaste.",
+    "imageAlt": "Local service providers from different industries in Guanacaste",
+    "benefits": {
+      "visibility": "More visibility",
+      "local": "Local presence",
+      "simple": "Simple signup"
+    },
+    "cta": "Join ORBIT",
+    "statementLine1": "Your business,",
+    "statementLine2": "more visible in",
+    "statementLine3": "Guanacaste."
+  },
+  "CommunitySection": {
+    "latestNews": "Latest News",
+    "eyebrow": "MORE THAN A SERVICE",
+    "titleLine1": "A connected",
+    "titleHighlight": "Guanacaste.",
+    "description": "Discover local services, support local businesses and stay close to what’s happening in the community.",
+    "cta": "Explore ORBIT",
+    "cards": {
+      "card1": {
+        "category": "Community News",
+        "title": "Local updates and businesses in one place",
+        "excerpt": "Stay connected with what’s happening across Guanacaste."
+      },
+      "card2": {
+        "category": "Events",
+        "title": "See what’s happening around you",
+        "excerpt": "Discover local events and opportunities across Guanacaste."
+      },
+      "card3": {
+        "category": "Local Spotlight",
+        "title": "Stories, places and new opportunities",
+        "excerpt": "Explore local initiatives and community highlights."
+      }
+    }
+  },
+  "Footer": {
+    "homeLabel": "ORBIT home",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "location": "Guanacaste, Costa Rica"
+  }
+}

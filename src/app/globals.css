@@ -21,7 +21,6 @@
   --border: #ded9d1;
 }
 
-
 /* =========================================================
    TAILWIND THEME
    ========================================================= */
@@ -40,7 +39,6 @@
 
   --font-sans: var(--font-geist);
 }
-
 
 /* =========================================================
    GLOBAL RESET
@@ -62,11 +60,7 @@ body {
   background: var(--background);
   color: var(--foreground);
 
-  font-family:
-    var(--font-geist),
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: var(--font-geist), Arial, Helvetica, sans-serif;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -94,16 +88,12 @@ svg {
   display: block;
 }
 
-
 /* =========================================================
    TYPOGRAPHY
    ========================================================= */
 
 .font-editorial {
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  font-family: var(--font-editorial), Georgia, "Times New Roman", serif;
 }
 
 .eyebrow {
@@ -114,7 +104,6 @@ svg {
   text-transform: uppercase;
 }
 
-
 /* =========================================================
    PREMIUM NAVBAR
    ========================================================= */
@@ -122,13 +111,12 @@ svg {
 .orbit-navbar {
   color: white;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgb(0 0 0 / 0.5) 0%,
-      rgb(0 0 0 / 0.18) 55%,
-      transparent 100%
-    );
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0.5) 0%,
+    rgb(0 0 0 / 0.18) 55%,
+    transparent 100%
+  );
 }
 
 .navbar-language {
@@ -179,7 +167,6 @@ svg {
   transform: scale(1.04);
 }
 
-
 /* =========================================================
    MENU OVERLAY
    ========================================================= */
@@ -216,19 +203,17 @@ svg {
   display: flex;
   flex-direction: column;
 
-  width: min(440px, 90vw);
+  width: min(320px, 82vw);
   min-height: 100vh;
 
-  padding: 140px 55px 48px;
+  padding: 120px 28px 36px;
 
   background: rgb(27 27 25 / 0.97);
   color: #f7f4ef;
 
-  box-shadow:
-    -25px 0 80px rgb(0 0 0 / 0.22);
+  box-shadow: -25px 0 80px rgb(0 0 0 / 0.22);
 
-  animation: orbitMenuEnter 450ms
-    cubic-bezier(0.22, 1, 0.36, 1);
+  animation: orbitMenuEnter 450ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @keyframes orbitMenuEnter {
@@ -259,19 +244,17 @@ svg {
 }
 
 .orbit-menu-navigation a {
-  padding: 20px 0;
+  padding: 13px 0;
 
   border-bottom: 1px solid rgb(255 255 255 / 0.12);
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
+  font-family: var(--font-editorial), Georgia, "Times New Roman", serif;
 
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: 1;
+  font-size: clamp(1.2rem, 1.6vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.1;
 
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
 
   transition:
     color 220ms ease,
@@ -301,7 +284,6 @@ svg {
   text-transform: uppercase;
 }
 
-
 /* =========================================================
    MOBILE NAVBAR
    ========================================================= */
@@ -317,18 +299,14 @@ svg {
   }
 
   .orbit-menu-panel {
-    width: 100%;
-    padding:
-      125px
-      32px
-      40px;
+    width: min(360px, 92vw);
+    padding: 110px 28px 36px;
   }
 
   .orbit-menu-navigation a {
-    font-size: 2.6rem;
+    font-size: 1rem;
   }
 }
-
 
 /* =========================================================
    HERO
@@ -339,7 +317,6 @@ svg {
 
   background: var(--background);
 }
-
 
 /* Full-screen photography */
 
@@ -356,7 +333,6 @@ svg {
 
   transform: scale(1.01);
 }
-
 
 /*
  * Editorial spotlight.
@@ -375,7 +351,7 @@ svg {
       rgb(247 244 239 / 0.88) 28%,
       rgb(247 244 239 / 0.68) 45%,
       rgb(247 244 239 / 0.34) 62%,
-      rgb(247 244 239 / 0.10) 77%,
+      rgb(247 244 239 / 0.1) 77%,
       transparent 100%
     ),
     linear-gradient(
@@ -385,7 +361,6 @@ svg {
       transparent 30%
     );
 }
-
 
 /* Hero quick links */
 
@@ -416,10 +391,8 @@ svg {
 
   transform: translateY(-1px);
 
-  box-shadow:
-    0 8px 22px rgb(0 0 0 / 0.08);
+  box-shadow: 0 8px 22px rgb(0 0 0 / 0.08);
 }
-
 
 /* =========================================================
    BUSINESS SPOTLIGHT
@@ -427,21 +400,12 @@ svg {
 
 .business-photo {
   background:
-    radial-gradient(
-      circle at 35% 30%,
-      rgb(243 107 33 / 0.35),
-      transparent 20%
-    ),
-    linear-gradient(
-      145deg,
-      #3d423b,
-      #171914
-    );
+    radial-gradient(circle at 35% 30%, rgb(243 107 33 / 0.35), transparent 20%),
+    linear-gradient(145deg, #3d423b, #171914);
 
   background-position: center;
   background-size: cover;
 }
-
 
 /* =========================================================
    COMMUNITY
@@ -449,21 +413,12 @@ svg {
 
 .community-photo {
   background:
-    linear-gradient(
-      145deg,
-      transparent,
-      rgb(243 107 33 / 0.12)
-    ),
-    linear-gradient(
-      160deg,
-      #3b4139,
-      #10120f
-    );
+    linear-gradient(145deg, transparent, rgb(243 107 33 / 0.12)),
+    linear-gradient(160deg, #3b4139, #10120f);
 
   background-position: center;
   background-size: cover;
 }
-
 
 /* =========================================================
    SERVICES SECTION
@@ -476,7 +431,6 @@ svg {
   color: var(--foreground);
 }
 
-
 /* Premium floating container */
 
 .services-panel {
@@ -487,10 +441,8 @@ svg {
 
   border-radius: 30px;
 
-  box-shadow:
-    0 18px 55px rgb(0 0 0 / 0.08);
+  box-shadow: 0 18px 55px rgb(0 0 0 / 0.08);
 }
-
 
 /* Subtle panel highlight */
 
@@ -504,14 +456,12 @@ svg {
 
   border-radius: inherit;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgb(255 255 255 / 0.025),
-      transparent 35%
-    );
+  background: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.025),
+    transparent 35%
+  );
 }
-
 
 /* =========================================================
    SERVICES CAROUSEL
@@ -529,7 +479,6 @@ svg {
 .service-scroll::-webkit-scrollbar {
   display: none;
 }
-
 
 /* =========================================================
    SERVICE CARD
@@ -560,7 +509,6 @@ svg {
 
   will-change: width, transform;
 }
-
 
 /* =========================================================
    SERVICE CARD HEIGHT RHYTHM
@@ -616,7 +564,6 @@ svg {
   border-radius: 44px 44px 18px 18px;
 }
 
-
 /* =========================================================
    ACTIVE SERVICE CARD
    ========================================================= */
@@ -627,15 +574,13 @@ svg {
 
   transform: translateY(-5px);
 
-  box-shadow:
-    0 22px 45px rgb(0 0 0 / 0.14);
+  box-shadow: 0 22px 45px rgb(0 0 0 / 0.14);
 }
 
 .service-card:focus-visible {
   outline: 2px solid var(--orbit-orange);
   outline-offset: 4px;
 }
-
 
 /* =========================================================
    SERVICE IMAGE
@@ -660,7 +605,6 @@ svg {
   transform: scale(1.045);
 }
 
-
 /* =========================================================
    SERVICE ICON
    ========================================================= */
@@ -674,7 +618,6 @@ svg {
 .service-card-active .service-icon {
   transform: translateY(-2px);
 }
-
 
 /* =========================================================
    SERVICE DESCRIPTION
@@ -700,7 +643,6 @@ svg {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* =========================================================
    SERVICE ARROWS
@@ -760,7 +702,6 @@ svg {
   color: var(--orbit-black);
 }
 
-
 /* =========================================================
    SERVICE CATEGORY BACKGROUNDS
    ========================================================= */
@@ -769,171 +710,81 @@ svg {
 
 .service-mechanic {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.62),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #555b5c,
-      #111111
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.62), transparent 58%),
+    linear-gradient(160deg, #555b5c, #111111);
 }
-
 
 /* Restaurants */
 
 .service-food {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.62),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #87523b,
-      #17110e
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.62), transparent 58%),
+    linear-gradient(160deg, #87523b, #17110e);
 }
-
 
 /* Tours */
 
 .service-tour {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.55),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #d9a76d,
-      #37555c
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.55), transparent 58%),
+    linear-gradient(160deg, #d9a76d, #37555c);
 }
-
 
 /* Delivery */
 
 .service-delivery {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.62),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #765b48,
-      #20211d
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.62), transparent 58%),
+    linear-gradient(160deg, #765b48, #20211d);
 }
-
 
 /* Pharmacies */
 
 .service-pharmacy {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.62),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #9b765d,
-      #34342f
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.62), transparent 58%),
+    linear-gradient(160deg, #9b765d, #34342f);
 }
-
 
 /* A/C */
 
 .service-ac {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.62),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #bbb8aa,
-      #55584f
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.62), transparent 58%),
+    linear-gradient(160deg, #bbb8aa, #55584f);
 }
-
 
 /* Pools */
 
 .service-pools {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.58),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #5e8c99,
-      #17363e
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.58), transparent 58%),
+    linear-gradient(160deg, #5e8c99, #17363e);
 }
-
 
 /* Handyman */
 
 .service-handyman {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.62),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #9a7957,
-      #30251c
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.62), transparent 58%),
+    linear-gradient(160deg, #9a7957, #30251c);
 }
-
 
 /* Personal Care */
 
 .service-personal-care {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.62),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #80675c,
-      #241d1a
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.62), transparent 58%),
+    linear-gradient(160deg, #80675c, #241d1a);
 }
-
 
 /* Pet Care */
 
 .service-pet {
   background:
-    linear-gradient(
-      to top,
-      rgb(0 0 0 / 0.58),
-      transparent 58%
-    ),
-    linear-gradient(
-      160deg,
-      #b99878,
-      #41473e
-    );
+    linear-gradient(to top, rgb(0 0 0 / 0.58), transparent 58%),
+    linear-gradient(160deg, #b99878, #41473e);
 }
-
 
 /* =========================================================
    TABLET
@@ -952,11 +803,7 @@ svg {
         rgb(247 244 239 / 0.74) 50%,
         rgb(247 244 239 / 0.16) 100%
       ),
-      linear-gradient(
-        180deg,
-        rgb(0 0 0 / 0.16),
-        transparent 25%
-      );
+      linear-gradient(180deg, rgb(0 0 0 / 0.16), transparent 25%);
   }
 
   .service-card {
@@ -970,20 +817,18 @@ svg {
   }
 }
 
-
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 767px) {
   .orbit-navbar {
-    background:
-      linear-gradient(
-        180deg,
-        rgb(0 0 0 / 0.72),
-        rgb(0 0 0 / 0.24) 72%,
-        transparent
-      );
+    background: linear-gradient(
+      180deg,
+      rgb(0 0 0 / 0.72),
+      rgb(0 0 0 / 0.24) 72%,
+      transparent
+    );
   }
 
   .hero {
@@ -1002,11 +847,7 @@ svg {
         rgb(247 244 239 / 0.76) 58%,
         rgb(247 244 239 / 0.24) 100%
       ),
-      linear-gradient(
-        180deg,
-        rgb(0 0 0 / 0.20),
-        transparent 25%
-      );
+      linear-gradient(180deg, rgb(0 0 0 / 0.2), transparent 25%);
   }
 
   .service-card,
@@ -1034,7 +875,6 @@ svg {
     transform: none;
   }
 }
-
 
 /* =========================================================
    REDUCED MOTION

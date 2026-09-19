@@ -1,6 +1,6 @@
-import { BusinessSpotlight } from "@/components/home/BusinessSpotlight";
 import { CommunitySection } from "@/components/home/CommunitySection";
 import { Hero } from "@/components/home/Hero";
+import { ProviderCTA } from "@/components/home/ProviderCTA";
 import { ServiceCategories } from "@/components/home/ServiceCategories";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Hero />
       <ServiceCategories />
-      <BusinessSpotlight />
+      <ProviderCTA />
       <CommunitySection />
     </main>
   );

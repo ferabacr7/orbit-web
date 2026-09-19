@@ -1,0 +1,125 @@
+{
+  "Navbar": {
+    "homeLabel": "Inicio de ORBIT",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "exploreOrbit": "Explorá ORBIT",
+    "services": "Servicios",
+    "forBusinesses": "Para negocios",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "guanacaste": "Guanacaste",
+    "costaRica": "Costa Rica"
+  },
+  "Hero": {
+    "eyebrow": "Gente local. Soluciones reales.",
+    "titleLine1": "Guanacaste",
+    "titleConnector": "en",
+    "titleHighlight": "un solo lugar.",
+    "description": "Encontrá servicios, negocios y experiencias locales de confianza todo cerca de vos."
+  },
+  "SearchBar": {
+    "inputLabel": "Buscar servicios locales",
+    "placeholder": "¿Qué necesitás hoy?",
+    "submitLabel": "Buscar"
+  },
+  "ServiceCategories": {
+    "title": "Explorá cerca de vos",
+    "explore": "Explorar",
+    "previous": "Servicios anteriores",
+    "next": "Más servicios",
+    "services": {
+      "mechanics": {
+        "name": "Mecánica",
+        "description": "Seguí en movimiento."
+      },
+      "restaurants": {
+        "name": "Restaurantes",
+        "description": "Buena comida, gente local."
+      },
+      "tours": {
+        "name": "Tours y actividades",
+        "description": "Explorá Guanacaste."
+      },
+      "delivery": {
+        "name": "Delivery",
+        "description": "De aquí hasta vos."
+      },
+      "pharmacies": {
+        "name": "Farmacias",
+        "description": "Salud más cerca de vos."
+      },
+      "ac": {
+        "name": "Aire acondicionado",
+        "description": "Mantené tu espacio fresco."
+      },
+      "pools": {
+        "name": "Piscinas",
+        "description": "Cuidado para tu piscina."
+      },
+      "handyman": {
+        "name": "Mantenimiento",
+        "description": "Ayuda para tu hogar."
+      },
+      "personalCare": {
+        "name": "Barbería y cuidado personal",
+        "description": "Sentite y lucí mejor."
+      },
+      "petCare": {
+        "name": "Cuidado de mascotas",
+        "description": "Para compañeros felices."
+      }
+    }
+  },
+  "ProviderCTA": {
+    "eyebrow": "PARA PROVEEDORES",
+    "titleLine1": "Más visibilidad.",
+    "titleLine2": "Más",
+    "titleHighlight": "oportunidades.",
+    "description": "Sumá tu negocio a ORBIT y conectá con personas que ya están buscando servicios en Guanacaste.",
+    "imageAlt": "Proveedores locales de diferentes servicios en Guanacaste",
+    "benefits": {
+      "visibility": "Más visibilidad",
+      "local": "Presencia local",
+      "simple": "Registro simple"
+    },
+    "cta": "Uní tu negocio",
+    "statementLine1": "Tu negocio,",
+    "statementLine2": "más visible en",
+    "statementLine3": "Guanacaste."
+  },
+  "CommunitySection": {
+    "latestNews": "Últimas noticias",
+    "eyebrow": "MÁS QUE UN SERVICIO",
+    "titleLine1": "Una Guanacaste",
+    "titleHighlight": "conectada.",
+    "description": "Descubrí servicios locales, apoyá negocios locales y mantenete cerca de lo que está pasando en la comunidad.",
+    "cta": "Explorá ORBIT",
+    "cards": {
+      "card1": {
+        "category": "Noticias de la comunidad",
+        "title": "Actualizaciones locales y negocios en un solo lugar",
+        "excerpt": "Mantenete conectado con lo que está pasando en Guanacaste."
+      },
+      "card2": {
+        "category": "Eventos",
+        "title": "Descubrí lo que está pasando cerca tuyo",
+        "excerpt": "Encontrá eventos y oportunidades locales en Guanacaste."
+      },
+      "card3": {
+        "category": "Destacados locales",
+        "title": "Historias, lugares y nuevas oportunidades",
+        "excerpt": "Explorá iniciativas locales y momentos destacados de la comunidad."
+      }
+    }
+  },
+  "Footer": {
+    "homeLabel": "Inicio de ORBIT",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "email": "Correo electrónico",
+    "whatsapp": "WhatsApp",
+    "location": "Guanacaste, Costa Rica"
+  }
+}
