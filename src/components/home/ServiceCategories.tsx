@@ -1,103 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Box,
-  Cross,
-  Droplets,
-  Hammer,
-  PawPrint,
-  Scissors,
-  Snowflake,
-  Utensils,
-  Waves,
-  Wrench,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 
-type Service = {
-  id:
-    | "mechanics"
-    | "restaurants"
-    | "tours"
-    | "delivery"
-    | "pharmacies"
-    | "ac"
-    | "pools"
-    | "handyman"
-    | "personalCare"
-    | "petCare";
-  Icon: LucideIcon;
-  className: string;
-  image: string;
-};
-
-const services: Service[] = [
-  {
-    id: "mechanics",
-    Icon: Wrench,
-    className: "service-mechanic",
-    image: "/images/services/mechanics.png",
-  },
-  {
-    id: "restaurants",
-    Icon: Utensils,
-    className: "service-food",
-    image: "/images/services/restaurants.png",
-  },
-  {
-    id: "tours",
-    Icon: Waves,
-    className: "service-tour",
-    image: "/images/services/tours-activities.png",
-  },
-  {
-    id: "delivery",
-    Icon: Box,
-    className: "service-delivery",
-    image: "/images/services/delivery.png",
-  },
-  {
-    id: "pharmacies",
-    Icon: Cross,
-    className: "service-pharmacy",
-    image: "/images/services/pharmacies.png",
-  },
-  {
-    id: "ac",
-    Icon: Snowflake,
-    className: "service-ac",
-    image: "/images/services/ac-services.png",
-  },
-  {
-    id: "pools",
-    Icon: Droplets,
-    className: "service-pools",
-    image: "/images/services/pools.png",
-  },
-  {
-    id: "handyman",
-    Icon: Hammer,
-    className: "service-handyman",
-    image: "/images/services/handyman.png",
-  },
-  {
-    id: "personalCare",
-    Icon: Scissors,
-    className: "service-personal-care",
-    image: "/images/services/barbers-personal-care.png",
-  },
-  {
-    id: "petCare",
-    Icon: PawPrint,
-    className: "service-pet",
-    image: "/images/services/pet-care.png",
-  },
-];
+import { serviceCategories } from "@/data/serviceCategories";
+import { Link } from "@/i18n/navigation";
 
 const locations = [
   "Las Catalinas",
@@ -185,65 +94,70 @@ export function ServiceCategories() {
               onMouseLeave={() => setActiveIndex(null)}
             >
               <div className="mx-auto flex w-max min-w-full snap-x snap-mandatory items-end justify-center gap-2 px-16">
-                {services.map(({ id, Icon, className, image }, index) => {
-                  const isActive = activeIndex === index;
+                {serviceCategories.map(
+                  (
+                    { id, slug, translationKey, Icon, className, image },
+                    index,
+                  ) => {
+                    const isActive = activeIndex === index;
 
-                  return (
-                    <article
-                      key={id}
-                      tabIndex={0}
-                      onMouseEnter={() => revealCard(index)}
-                      onFocus={() => revealCard(index)}
-                      onBlur={() => setActiveIndex(null)}
-                      className={[
-                        "service-card group relative shrink-0 snap-start overflow-hidden",
-                        className,
-                        isActive ? "service-card-active" : "",
-                      ].join(" ")}
-                    >
-                      <div className="service-card-image absolute inset-0">
-                        <Image
-                          src={image}
-                          alt=""
-                          fill
-                          sizes="(max-width: 768px) 70vw, 180px"
-                          className="object-cover"
-                        />
-                      </div>
-
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                      <div className="absolute inset-x-0 bottom-0 z-10 px-3 pb-8 text-center text-white">
-                        <Icon
-                          size={24}
-                          strokeWidth={1.6}
-                          aria-hidden="true"
-                          className="service-icon mx-auto"
-                        />
-
-                        <h3 className="mx-auto mt-4 max-w-[180px] text-xs font-semibold uppercase leading-5 tracking-[0.14em]">
-                          {t(`services.${id}.name`)}
-                        </h3>
-
-                        <div
-                          className={[
-                            "service-description overflow-hidden",
-                            isActive ? "service-description-active" : "",
-                          ].join(" ")}
-                        >
-                          <p className="pt-2 text-sm text-white/70">
-                            {t(`services.${id}.description`)}
-                          </p>
-
-                          <span className="mt-3 inline-flex items-center gap-2 text-xs font-medium">
-                            {t("explore")}
-                            <ArrowRight size={14} />
-                          </span>
+                    return (
+                      <Link
+                        key={id}
+                        href={`/services/${slug}`}
+                        onMouseEnter={() => revealCard(index)}
+                        onFocus={() => revealCard(index)}
+                        onBlur={() => setActiveIndex(null)}
+                        className={[
+                          "service-card group relative shrink-0 snap-start overflow-hidden",
+                          className,
+                          isActive ? "service-card-active" : "",
+                        ].join(" ")}
+                      >
+                        <div className="service-card-image absolute inset-0">
+                          <Image
+                            src={image}
+                            alt=""
+                            fill
+                            sizes="(max-width: 768px) 70vw, 180px"
+                            className="object-cover"
+                          />
                         </div>
-                      </div>
-                    </article>
-                  );
-                })}
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+                        <div className="absolute inset-x-0 bottom-0 z-10 px-3 pb-8 text-center text-white">
+                          <Icon
+                            size={24}
+                            strokeWidth={1.6}
+                            aria-hidden="true"
+                            className="service-icon mx-auto"
+                          />
+
+                          <h3 className="mx-auto mt-4 max-w-[180px] text-xs font-semibold uppercase leading-5 tracking-[0.14em]">
+                            {t(`services.${translationKey}.name`)}
+                          </h3>
+
+                          <div
+                            className={[
+                              "service-description overflow-hidden",
+                              isActive ? "service-description-active" : "",
+                            ].join(" ")}
+                          >
+                            <p className="pt-2 text-sm text-white/70">
+                              {t(`services.${translationKey}.description`)}
+                            </p>
+
+                            <span className="mt-3 inline-flex items-center gap-2 text-xs font-medium">
+                              {t("explore")}
+                              <ArrowRight size={14} />
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  },
+                )}
               </div>
             </div>
 

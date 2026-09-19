@@ -72,6 +72,46 @@
       }
     }
   },
+  "CategoryListing": {
+    "breadcrumb": {
+      "home": "Inicio",
+      "services": "Servicios"
+    },
+    "eyebrow": "SERVICIOS",
+    "categories": {
+      "mechanics": {
+        "description": "Encontrá mecánicos locales de confianza en Guanacaste."
+      },
+      "restaurants": {
+        "description": "Encontrá restaurantes locales en Guanacaste."
+      },
+      "tours": {
+        "description": "Encontrá tours y actividades locales en Guanacaste."
+      },
+      "delivery": {
+        "description": "Encontrá servicios locales de entrega en Guanacaste."
+      },
+      "pharmacies": {
+        "description": "Encontrá farmacias locales en Guanacaste."
+      },
+      "ac": {
+        "description": "Encontrá servicios locales de aire acondicionado en Guanacaste."
+      },
+      "pools": {
+        "description": "Encontrá servicios locales para piscinas en Guanacaste."
+      },
+      "handyman": {
+        "description": "Encontrá servicios locales de mantenimiento en Guanacaste."
+      },
+      "personalCare": {
+        "description": "Encontrá barberías y servicios de cuidado personal en Guanacaste."
+      },
+      "petCare": {
+        "description": "Encontrá servicios locales para mascotas en Guanacaste."
+      }
+    }
+  },
+
   "ProviderCTA": {
     "eyebrow": "PARA PROVEEDORES",
     "titleLine1": "Más visibilidad.",

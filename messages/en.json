@@ -79,6 +79,45 @@
       }
     }
   },
+  "CategoryListing": {
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Services"
+  },
+  "eyebrow": "SERVICES",
+  "categories": {
+    "mechanics": {
+      "description": "Find trusted local mechanics in Guanacaste."
+    },
+    "restaurants": {
+      "description": "Find trusted local restaurants in Guanacaste."
+    },
+    "tours": {
+      "description": "Find trusted local tours and activities in Guanacaste."
+    },
+    "delivery": {
+      "description": "Find trusted local delivery services in Guanacaste."
+    },
+    "pharmacies": {
+      "description": "Find trusted local pharmacies in Guanacaste."
+    },
+    "ac": {
+      "description": "Find trusted local air conditioning services in Guanacaste."
+    },
+    "pools": {
+      "description": "Find trusted local pool services in Guanacaste."
+    },
+    "handyman": {
+      "description": "Find trusted local handyman services in Guanacaste."
+    },
+    "personalCare": {
+      "description": "Find trusted local barbers and personal care services in Guanacaste."
+    },
+    "petCare": {
+      "description": "Find trusted local pet care services in Guanacaste."
+    }
+  }
+},
   "ProviderCTA": {
     "eyebrow": "FOR PROVIDERS",
     "titleLine1": "More visibility.",

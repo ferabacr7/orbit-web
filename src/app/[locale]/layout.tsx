@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { DM_Serif_Display, Geist } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 
@@ -7,8 +7,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { routing } from "@/i18n/routing";
 import "@/app/globals.css";
-
-import { DM_Serif_Display } from "next/font/google";
 
 const dmSerif = DM_Serif_Display({
   weight: "400",
@@ -49,7 +47,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${dmSerif.variable}`}>
+      <body className={`${geist.variable} ${dmSerif.variable} antialiased`}>
         <NextIntlClientProvider>
           <Navbar />
           {children}

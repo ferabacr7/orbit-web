@@ -110,13 +110,19 @@ svg {
 
 .orbit-navbar {
   color: white;
+}
 
+.orbit-navbar-overlay {
   background: linear-gradient(
     180deg,
-    rgb(0 0 0 / 0.5) 0%,
-    rgb(0 0 0 / 0.18) 55%,
-    transparent 100%
+    rgb(0 0 0 / 0.72),
+    rgb(0 0 0 / 0.24) 72%,
+    transparent
   );
+}
+
+.orbit-navbar-solid {
+  background: var(--orbit-black);
 }
 
 .navbar-language {

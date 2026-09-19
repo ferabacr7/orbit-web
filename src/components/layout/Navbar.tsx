@@ -14,6 +14,7 @@ export function Navbar() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const isHome = pathname === "/";
 
   const changeLanguage = (nextLocale: "en" | "es") => {
     if (nextLocale === locale) return;
@@ -25,15 +26,18 @@ export function Navbar() {
 
   return (
     <>
-      <header className="orbit-navbar absolute inset-x-0 top-3 z-50">
+      <header
+        className={[
+          "orbit-navbar inset-x-0 z-50",
+          isHome
+            ? "orbit-navbar-overlay absolute top-3"
+            : "orbit-navbar-solid relative top-0",
+        ].join(" ")}
+      >
         <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
           <div className="flex h-[92px] items-center justify-between px-8 lg:px-14">
             {/* LOGO */}
-            <Link
-              href="/"
-              aria-label={t("homeLabel")}
-              className="shrink-0"
-            >
+            <Link href="/" aria-label={t("homeLabel")} className="shrink-0">
               <Image
                 src="/images/transparent-logo.png"
                 alt="ORBIT"
@@ -96,43 +100,26 @@ export function Navbar() {
           />
 
           <aside className="orbit-menu-panel">
-            <p className="orbit-menu-eyebrow">
-              {t("exploreOrbit")}
-            </p>
+            <p className="orbit-menu-eyebrow">{t("exploreOrbit")}</p>
 
             <nav className="orbit-menu-navigation">
-              <Link
-                href="/services"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link href="/services" onClick={() => setMenuOpen(false)}>
                 {t("services")}
               </Link>
 
-              <Link
-                href="/for-businesses"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link href="/for-businesses" onClick={() => setMenuOpen(false)}>
                 {t("forBusinesses")}
               </Link>
 
-              <Link
-                href="/about"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link href="/about" onClick={() => setMenuOpen(false)}>
                 {t("about")}
               </Link>
 
-              <Link
-                href="/privacy"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link href="/privacy" onClick={() => setMenuOpen(false)}>
                 {t("privacy")}
               </Link>
 
-              <Link
-                href="/terms"
-                onClick={() => setMenuOpen(false)}
-              >
+              <Link href="/terms" onClick={() => setMenuOpen(false)}>
                 {t("terms")}
               </Link>
             </nav>
