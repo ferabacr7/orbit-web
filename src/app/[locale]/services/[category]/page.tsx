@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-
+import { ProviderGrid } from "@/components/services/ProviderGrid";
+import { providers } from "@/data/providers";
+import { AreaFilters } from "@/components/services/AreaFilters";
 import { CategoryHeader } from "@/components/services/CategoryHeader";
 import { serviceCategories } from "@/data/serviceCategories";
 
@@ -11,9 +13,7 @@ type CategoryPageProps = {
   }>;
 };
 
-export default async function CategoryPage({
-  params,
-}: CategoryPageProps) {
+export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category } = await params;
 
   const serviceCategory = serviceCategories.find(
@@ -23,6 +23,10 @@ export default async function CategoryPage({
   if (!serviceCategory) {
     notFound();
   }
+
+  const categoryProviders = providers.filter(
+    (provider) => provider.categoryId === serviceCategory.id,
+  );
 
   const categoryTranslations = await getTranslations("CategoryListing");
   const serviceTranslations = await getTranslations("ServiceCategories");
@@ -36,7 +40,13 @@ export default async function CategoryPage({
   );
 
   return (
-    <main>
+    <main
+      className="flex-1 bg-cover bg-top bg-no-repeat"
+      style={{
+        backgroundImage:
+          "url('/images/backgrounds/orbit-services-background.png')",
+      }}
+    >
       <CategoryHeader
         name={name}
         description={description}
@@ -44,6 +54,10 @@ export default async function CategoryPage({
         servicesLabel={categoryTranslations("breadcrumb.services")}
         eyebrow={categoryTranslations("eyebrow")}
       />
+
+      <AreaFilters allAreasLabel={categoryTranslations("allAreas")} />
+
+      <ProviderGrid providers={categoryProviders} />
     </main>
   );
 }

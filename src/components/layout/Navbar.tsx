@@ -34,8 +34,8 @@ export function Navbar() {
             : "orbit-navbar-solid relative top-0",
         ].join(" ")}
       >
-        <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
-          <div className="flex h-[92px] items-center justify-between px-8 lg:px-14">
+        <div className="mx-auto w-full max-w-[1440px] px-4 lg:px-8">
+          <div className="flex h-[100px] items-center justify-between px-4 lg:px-8">
             {/* LOGO */}
             <Link href="/" aria-label={t("homeLabel")} className="shrink-0">
               <Image
@@ -44,10 +44,9 @@ export function Navbar() {
                 width={180}
                 height={60}
                 priority
-                className="relative top-[8px] h-auto w-[150px]"
+                className="h-auto w-[125px]"
               />
             </Link>
-
             {/* LANGUAGE + MENU */}
             <div className="flex items-center gap-5">
               <div className="flex items-center gap-2 text-[11px] font-medium tracking-[0.1em] text-white">

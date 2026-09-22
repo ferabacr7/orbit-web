@@ -47,11 +47,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${geist.variable} ${dmSerif.variable} antialiased`}>
+      <body
+        className={`${geist.variable} ${dmSerif.variable} min-h-screen antialiased`}
+      >
         <NextIntlClientProvider>
-          <Navbar />
-          {children}
-          <Footer />
+          <div className="flex min-h-screen flex-col">
+            <Navbar />
+
+            <div className="flex flex-1 flex-col">{children}</div>
+
+            <Footer />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
