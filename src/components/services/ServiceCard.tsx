@@ -18,20 +18,20 @@ type CardLayout = {
 };
 
 const cardLayouts: CardLayout[] = [
-  { shape: "left", height: 360 },  // Handyman
-  { shape: "left", height: 370 },  // Restaurants
-  { shape: "left", height: 360 },  // Pools
+  { shape: "left", height: 385 },  // Handyman
+  { shape: "left", height: 395 },  // Restaurants
+  { shape: "left", height: 385 },  // Pools
 
-  { shape: "right", height: 352 }, // Mechanics
-  { shape: "right", height: 368 }, // Pharmacies
+  { shape: "right", height: 377 }, // Mechanics
+  { shape: "right", height: 393 }, // Pharmacies
 
-  { shape: "left", height: 358 },  // Pet Care
-  { shape: "left", height: 364 },  // Delivery
+  { shape: "left", height: 383 },  // Pet Care
+  { shape: "left", height: 389 },  // Delivery
 
-  { shape: "right", height: 354 }, // Tours
-  { shape: "right", height: 364 }, // A/C
+  { shape: "right", height: 379 }, // Tours
+  { shape: "right", height: 389 }, // A/C
 
-  { shape: "left", height: 358 },  // Barbers
+  { shape: "left", height: 383 },  // Barbers
 ];
 
 export function ServiceCard({ category, name, index }: ServiceCardProps) {

@@ -91,10 +91,9 @@ export function ServiceCarousel() {
                 <div
                   key={category.id}
                   className="
-                    w-[140px] shrink-0
-                    sm:w-[145px]
-                    lg:w-[calc((100vw-176px)/8)]
-                  "
+    w-[140px] shrink-0
+    sm:w-[145px]
+lg:w-[calc((100vw-176px)/8)]  "
                 >
                   <ServiceCard
                     category={category}

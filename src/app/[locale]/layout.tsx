@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Geist } from "next/font/google";
+import { Geist, Playfair_Display } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 
@@ -8,8 +8,9 @@ import { Footer } from "@/components/layout/Footer";
 import { routing } from "@/i18n/routing";
 import "@/app/globals.css";
 
-const dmSerif = DM_Serif_Display({
-  weight: "400",
+const editorial = Playfair_Display({
+  weight: "500",
+  style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-editorial",
 });
@@ -48,7 +49,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geist.variable} ${dmSerif.variable} min-h-screen antialiased`}
+        className={`${geist.variable} ${editorial.variable} min-h-screen antialiased`}
       >
         <NextIntlClientProvider>
           <div className="flex min-h-screen flex-col">

@@ -14,7 +14,6 @@ export function Navbar() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
-  const isHome = pathname === "/";
 
   const changeLanguage = (nextLocale: "en" | "es") => {
     if (nextLocale === locale) return;
@@ -26,16 +25,10 @@ export function Navbar() {
 
   return (
     <>
-      <header
-        className={[
-          "orbit-navbar inset-x-0 z-50",
-          isHome
-            ? "orbit-navbar-overlay absolute top-3"
-            : "orbit-navbar-solid relative top-0",
-        ].join(" ")}
-      >
-        <div className="mx-auto w-full max-w-[1440px] px-4 lg:px-8">
-          <div className="flex h-[100px] items-center justify-between px-4 lg:px-8">
+      <header className="relative z-50 w-full bg-black">
+        {" "}
+        <div className="mx-auto w-full px-[clamp(32px,5vw,76px)]">
+          <div className="flex h-[92px] items-center justify-between">
             {/* LOGO */}
             <Link href="/" aria-label={t("homeLabel")} className="shrink-0">
               <Image
@@ -47,36 +40,78 @@ export function Navbar() {
                 className="h-auto w-[125px]"
               />
             </Link>
-            {/* LANGUAGE + MENU */}
-            <div className="flex items-center gap-5">
-              <div className="flex items-center gap-2 text-[11px] font-medium tracking-[0.1em] text-white">
+
+            {/* RIGHT NAVIGATION */}
+            <div className="flex items-center gap-7">
+              {/* FOR BUSINESSES */}
+              <Link
+                href="/for-businesses"
+                className="
+    hidden
+    text-[12px]
+    font-medium
+    tracking-[0.02em]
+    !text-white
+    transition-colors
+    duration-200
+    hover:!text-orbit-orange
+    md:block
+  "
+              >
+                {t("forBusinesses")}
+              </Link>
+
+              {/* LANGUAGE */}
+              <div className="flex items-center gap-2 text-[11px] font-medium tracking-[0.1em]">
                 <button
                   type="button"
                   onClick={() => changeLanguage("es")}
                   aria-pressed={locale === "es"}
-                  className="navbar-language"
+                  className={
+                    locale === "es"
+                      ? "text-white"
+                      : "text-white/45 transition-colors hover:text-white"
+                  }
                 >
                   ES
                 </button>
 
-                <span className="text-white/40">|</span>
-
+                <span className="text-white/30">|</span>
                 <button
                   type="button"
                   onClick={() => changeLanguage("en")}
                   aria-pressed={locale === "en"}
-                  className="navbar-language"
+                  className={
+                    locale === "en"
+                      ? "text-white"
+                      : "text-white/45 transition-colors hover:text-white"
+                  }
                 >
                   EN
                 </button>
               </div>
 
+              {/* MENU BUTTON */}
               <button
                 type="button"
                 aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
                 aria-expanded={menuOpen}
                 onClick={() => setMenuOpen((prev) => !prev)}
-                className="premium-menu-button"
+                className="
+  flex
+  size-11
+  items-center
+  justify-center
+  rounded-full
+  border
+  border-white/15
+  bg-white/[0.06]
+  text-white
+  transition-all
+  duration-200
+  hover:border-white/30
+  hover:bg-white/[0.10]
+"
               >
                 {menuOpen ? (
                   <X size={21} strokeWidth={1.5} />
@@ -89,6 +124,7 @@ export function Navbar() {
         </div>
       </header>
 
+      {/* MOBILE / SIDE MENU */}
       {menuOpen && (
         <div className="orbit-menu">
           <button

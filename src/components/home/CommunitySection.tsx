@@ -1,97 +1,88 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
 
-const newsCards = [
-  {
-    id: 0,
-    image: "/images/community/community-news-1.png",
-    alt: "Community news 1",
-  },
-  {
-    id: 1,
-    image: "/images/community/community-news-1.png",
-    alt: "Community news 2",
-  },
-  {
-    id: 2,
-    image: "/images/community/community-news-1.png",
-    alt: "Community news 3",
-  },
-];
+type CommunitySectionProps = {
+  locale: string;
+};
 
-export function CommunitySection() {
-  const [activeCard, setActiveCard] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveCard((prev) => (prev + 1) % newsCards.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentCard = newsCards[activeCard];
-
-  const t = useTranslations("CommunitySection");
+export function CommunitySection({ locale }: CommunitySectionProps) {
+ const communityImage =
+  locale === "es"
+    ? "/images/community/orbit-community-es.png"
+    : "/images/community/orbit-community-en.png";
 
   return (
-    <section className="pb-16">
-      <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
-        <div className="relative h-[450px] overflow-hidden rounded-[34px]">
-          {/* WAVE BANNER */}
-          <Image
-            src="/images/community/community-wave-banner.png"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-contain object-right"
-            priority
-          />
+    <section className="relative w-full bg-[#f7f4ef] pt-2">
+      <div className="relative h-[250px] w-full overflow-hidden">
+        {/* COMMUNITY IMAGE */}
+        <Image
+          src={communityImage}
+          alt=""
+          fill
+          sizes="100vw"
+          className="
+            object-cover
+            object-center
+            saturate-[0.92]
+            contrast-[0.98]
+          "
+        />
 
-          {/* NEWS AREA */}
-          <div className="absolute left-6 top-3 z-10 w-[70%] max-w-[910px] md:left-8 lg:left-10">
-            {" "}
-            {/* LABEL */}
-            <div className="mb-4 flex items-center gap-3">
-              <div className="h-[2px] w-10 bg-orbit-orange" />
+        {/* LEFT → RIGHT DARK GRADIENT */}
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute inset-y-0 left-0
+            z-[1]
+            w-[62%]
+            bg-gradient-to-r
+            from-black/65
+            via-black/30
+            via-[45%]
+            to-transparent
+          "
+        />
 
-              <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-black">
-                {t("latestNews")}
-              </p>
-            </div>
-            {/* IMAGE CARD */}
-            <div className="overflow-hidden rounded-[28px] border border-black/10 bg-black/45 shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
-              <div className="relative h-[285px] w-full md:h-[310px] lg:h-[325px]">
-                <Image
-                  src={currentCard.image}
-                  alt={currentCard.alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 880px"
-                  className="object-cover"
-                />
-              </div>
+        {/* COMMUNITY CONTENT */}
+        <div
+          className="
+            absolute
+            left-[clamp(32px,5vw,76px)]
+            top-1/2
+            z-10
+            -translate-y-1/2
+          "
+        >
+          {/* EYEBROW */}
+          <p
+            className="
+              text-[9px]
+              font-semibold
+              uppercase
+              tracking-[0.38em]
+              text-white/90
+            "
+          >
+            {locale === "es" ? "MÁS QUE UN SERVICIO" : "MORE THAN A SERVICE"}
+          </p>
 
-              {/* DOTS */}
-              <div className="flex justify-center gap-2 py-4">
-                {newsCards.map((card, index) => (
-                  <button
-                    key={card.id}
-                    type="button"
-                    aria-label={`Go to slide ${index + 1}`}
-                    onClick={() => setActiveCard(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === activeCard
-                        ? "w-8 bg-orbit-orange"
-                        : "w-2 bg-white/30"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+          {/* TITLE */}
+          <h2
+            className="
+              mt-3
+              font-editorial
+              text-[clamp(2.5rem,3.7vw,4.2rem)]
+              leading-[0.94]
+              tracking-[-0.02em]
+              text-white
+            "
+          >
+            {locale === "es" ? "Un Guanacaste" : "A connected"}
+
+            <span className="mt-1 block italic text-orbit-orange">
+              {locale === "es" ? "conectado." : "Guanacaste."}
+            </span>
+          </h2>
         </div>
       </div>
     </section>
