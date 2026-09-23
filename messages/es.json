@@ -29,6 +29,9 @@
     "explore": "Explorar",
     "previous": "Servicios anteriores",
     "next": "Más servicios",
+    "servicesLabel": "SERVICIOS",
+    "allYouNeed": "TODO LO QUE NECESITÁS",
+    "inGuanacaste": "EN GUANACASTE",
     "services": {
       "mechanics": {
         "name": "Mecánica",
