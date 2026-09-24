@@ -5,6 +5,7 @@ import { providers } from "@/data/providers";
 import { AreaFilters } from "@/components/services/AreaFilters";
 import { CategoryHeader } from "@/components/services/CategoryHeader";
 import { serviceCategories } from "@/data/serviceCategories";
+import { CategoryProviderCTA } from "@/components/services/CategoryProviderCTA";
 
 type CategoryPageProps = {
   params: Promise<{
@@ -14,8 +15,7 @@ type CategoryPageProps = {
 };
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { category } = await params;
-
+  const { locale, category } = await params;
   const serviceCategory = serviceCategories.find(
     (item) => item.slug === category,
   );
@@ -40,13 +40,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   );
 
   return (
-    <main
-      className="flex-1 bg-cover bg-top bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url('/images/backgrounds/orbit-services-background.png')",
-      }}
-    >
+    <main className="flex-1 bg-[#f7f4ef]">
       <CategoryHeader
         name={name}
         description={description}
@@ -57,7 +51,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       <AreaFilters allAreasLabel={categoryTranslations("allAreas")} />
 
-      <ProviderGrid providers={categoryProviders} />
+      <ProviderGrid providers={categoryProviders} locale={locale} />
+      <CategoryProviderCTA locale={locale} />
     </main>
   );
 }

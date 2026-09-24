@@ -30,13 +30,18 @@ export function AreaFilters({
           onClick={() => setActiveArea("all")}
           aria-pressed={activeArea === "all"}
           className={[
-            "inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition-colors",
+            "inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-medium backdrop-blur-md transition-all duration-300 ease-out",
             activeArea === "all"
-              ? "bg-[var(--orbit-orange)] text-white"
-              : "bg-black/[0.04] text-black/70 hover:bg-black/[0.08]",
+              ? "border-[var(--orbit-orange)] bg-[var(--orbit-orange)] text-white shadow-[0_10px_28px_rgba(255,112,35,0.30)] ring-1 ring-[var(--orbit-orange)]/20"
+              : "border-black/[0.08] bg-white/75 text-black/70 shadow-[0_6px_18px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:border-black/[0.12] hover:bg-white hover:text-black hover:shadow-[0_14px_30px_rgba(0,0,0,0.10)]",
           ].join(" ")}
         >
-          <MapPin size={16} strokeWidth={2} aria-hidden="true" />
+          <MapPin
+            size={16}
+            strokeWidth={2}
+            aria-hidden="true"
+          />
+
           {allAreasLabel}
         </button>
 
@@ -50,10 +55,10 @@ export function AreaFilters({
               onClick={() => setActiveArea(area.id)}
               aria-pressed={isActive}
               className={[
-                "rounded-full px-5 py-3 text-sm font-medium transition-colors",
+                "rounded-full border px-5 py-3 text-sm font-medium backdrop-blur-md transition-all duration-300 ease-out",
                 isActive
-                  ? "bg-[var(--orbit-orange)] text-white"
-                  : "bg-black/[0.04] text-black/70 hover:bg-black/[0.08]",
+                  ? "border-[var(--orbit-orange)] bg-[var(--orbit-orange)] text-white shadow-[0_10px_28px_rgba(255,112,35,0.30)] ring-1 ring-[var(--orbit-orange)]/20"
+                  : "border-black/[0.08] bg-white/75 text-black/70 shadow-[0_6px_18px_rgba(0,0,0,0.05)] hover:-translate-y-1 hover:border-black/[0.12] hover:bg-white hover:text-black hover:shadow-[0_14px_30px_rgba(0,0,0,0.10)]",
               ].join(" ")}
             >
               {area.name}
