@@ -87,16 +87,16 @@ export function ServiceCarousel() {
             "
           >
             {/* CARDS TRACK */}
-            <div className="flex w-max items-end gap-[8px]">
+            <div className="flex w-max items-end gap-[14px]">
               {orderedCategories.map((category, index) => (
                 <div
                   key={category.id}
-                  className="
-  w-[150px] shrink-0
-  sm:w-[160px]
-  lg:w-[175px]
-  xl:w-[185px]
-  2xl:w-[195px]
+        className="
+  w-[140px] shrink-0
+  sm:w-[150px]
+  lg:w-[160px]
+  xl:w-[170px]
+  2xl:w-[180px]
 "
                 >
                   <ServiceCard

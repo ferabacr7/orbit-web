@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
@@ -108,13 +109,21 @@ export async function Hero({ locale }: HeroProps) {
           md:w-[clamp(210px,17vw,280px)]
         "
       >
-        <Image
-          src={proOfferImage}
-          alt={locale === "es" ? "10 semanas de Pro" : "10 weeks of Pro"}
-          width={500}
-          height={500}
-          className="h-auto w-full"
-        />
+        <Link
+          href="/for-businesses"
+          aria-label={
+            locale === "es" ? "Ver planes para negocios" : "View business plans"
+          }
+          className="block transition-transform duration-300 hover:-translate-y-1"
+        >
+          <Image
+            src={proOfferImage}
+            alt={locale === "es" ? "10 semanas de Pro" : "10 weeks of Pro"}
+            width={500}
+            height={500}
+            className="h-auto w-full"
+          />
+        </Link>
       </div>
 
       {/* HERO CONTENT */}

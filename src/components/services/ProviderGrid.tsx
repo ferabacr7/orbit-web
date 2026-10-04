@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { Link } from "@/i18n/navigation";
 import { ProviderCard } from "@/components/services/ProviderCard";
 import type { Provider } from "@/data/providers";
 import { ProviderPlaceholderCard } from "@/components/services/ProviderPlaceholderCard";
@@ -37,14 +37,31 @@ export function ProviderGrid({ providers, locale }: ProviderGridProps) {
       {/* ORBIT PRO OFFER */}
       {showDemoVisuals && (
         <div className="pointer-events-none absolute inset-0 z-20 hidden overflow-visible lg:block">
-          <div className="absolute right-[20%] top-[-330px] h-[290px] w-[390px]">
-            <Image
-              src={offerImage}
-              alt=""
-              fill
-              sizes="390px"
-              className="object-contain"
-            />
+          <div className="pointer-events-auto absolute right-[20%] top-[-330px] h-[290px] w-[390px]">
+            <Link
+              href="/for-businesses"
+              aria-label={
+                locale === "es"
+                  ? "Ver planes para negocios"
+                  : "View business plans"
+              }
+              className="
+          group block h-full w-full
+          transition-transform
+          duration-300
+          ease-out
+          hover:-translate-y-1
+          hover:scale-[1.03]
+        "
+            >
+              <Image
+                src={offerImage}
+                alt={locale === "es" ? "10 semanas de Pro" : "10 weeks of Pro"}
+                fill
+                sizes="390px"
+                className="object-contain"
+              />
+            </Link>
           </div>
         </div>
       )}

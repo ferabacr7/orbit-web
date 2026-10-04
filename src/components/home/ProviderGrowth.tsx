@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 type ProviderGrowthProps = {
   locale: string;
@@ -74,9 +75,7 @@ export function ProviderGrowth({ locale }: ProviderGrowthProps) {
               text-[#101318]
             "
           >
-            {locale === "es"
-              ? "Profesionales reales."
-              : "Real professionals."}
+            {locale === "es" ? "Profesionales reales." : "Real professionals."}
 
             <span className="mt-1 block">
               {locale === "es" ? (
@@ -86,8 +85,7 @@ export function ProviderGrowth({ locale }: ProviderGrowthProps) {
                 </>
               ) : (
                 <>
-                  Real{" "}
-                  <span className="italic text-orbit-orange">impact.</span>
+                  Real <span className="italic text-orbit-orange">impact.</span>
                 </>
               )}
             </span>
@@ -99,44 +97,49 @@ export function ProviderGrowth({ locale }: ProviderGrowthProps) {
               : "ORBIT helps businesses in Guanacaste connect better with their community."}
           </p>
 
-          <button
-            type="button"
+          <Link
+            href="/for-businesses"
             className="
-              mt-7
-              inline-flex
-              h-[54px]
-              items-center
-              gap-8
-              rounded-full
-              bg-white
-              py-[5px]
-              pl-6
-              pr-[5px]
-              text-[14px]
-              font-semibold
-              text-black
-              shadow-[0_12px_35px_rgba(0,0,0,0.08)]
-              transition-all
-              duration-300
-              hover:shadow-[0_16px_40px_rgba(0,0,0,0.12)]
-            "
+    group
+    mt-7
+    inline-flex
+    h-[54px]
+    items-center
+    gap-8
+    rounded-full
+    bg-white
+    py-[5px]
+    pl-6
+    pr-[5px]
+    text-[14px]
+    font-semibold
+    text-black
+    shadow-[0_12px_35px_rgba(0,0,0,0.08)]
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:shadow-[0_16px_40px_rgba(0,0,0,0.12)]
+  "
           >
             {locale === "es" ? "Incluí tu negocio" : "List Your Business"}
 
             <span
               className="
-                flex
-                size-11
-                items-center
-                justify-center
-                rounded-full
-                bg-orbit-orange
-                text-white
-              "
+      flex
+      size-11
+      items-center
+      justify-center
+      rounded-full
+      bg-orbit-orange
+      text-white
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
             >
               <ArrowRight size={18} strokeWidth={1.6} />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
