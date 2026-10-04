@@ -8,12 +8,8 @@ type ProviderGridProps = {
   locale: string;
 };
 
-export function ProviderGrid({
-  providers,
-  locale,
-}: ProviderGridProps) {
-  const showDemoVisuals =
-    providers.length === 1 && providers[0]?.isSample;
+export function ProviderGrid({ providers, locale }: ProviderGridProps) {
+  const showDemoVisuals = providers.length === 1 && providers[0]?.isSample;
 
   const offerImage =
     locale === "es"
@@ -55,10 +51,7 @@ export function ProviderGrid({
       {/* PROVIDER CARDS */}
       <div className="relative z-10 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
         {providers.map((provider) => (
-          <ProviderCard
-            key={provider.id}
-            provider={provider}
-          />
+          <ProviderCard key={provider.id} provider={provider} locale={locale} />
         ))}
       </div>
     </section>
