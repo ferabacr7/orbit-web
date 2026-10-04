@@ -30,10 +30,14 @@ export default async function HomePage({ params }: HomePageProps) {
       </section>
 
       {/* PROVIDER GROWTH */}
-      <ProviderGrowth locale={locale} />
+      <section className="mt-10 lg:mt-14">
+        <ProviderGrowth locale={locale} />
+      </section>
 
       {/* COMMUNITY */}
-      <CommunitySection locale={locale} />
+      <section className="mt-10 lg:mt-14">
+        <CommunitySection locale={locale} />
+      </section>
     </main>
   );
 }

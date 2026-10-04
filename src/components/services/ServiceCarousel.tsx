@@ -52,7 +52,8 @@ export function ServiceCarousel() {
   };
 
   return (
-    <section className="relative w-full">
+    <section id="services" className="relative w-full scroll-mt-24">
+      {" "}
       {/* CAROUSEL */}
       <div className="relative">
         {/* LEFT ARROW */}
@@ -91,9 +92,12 @@ export function ServiceCarousel() {
                 <div
                   key={category.id}
                   className="
-    w-[140px] shrink-0
-    sm:w-[145px]
-lg:w-[calc((100vw-176px)/8)]  "
+  w-[150px] shrink-0
+  sm:w-[160px]
+  lg:w-[175px]
+  xl:w-[185px]
+  2xl:w-[195px]
+"
                 >
                   <ServiceCard
                     category={category}
@@ -125,7 +129,6 @@ lg:w-[calc((100vw-176px)/8)]  "
           <ArrowRight size={17} strokeWidth={1.5} />
         </button>
       </div>
-
       {/* SERVICE AREAS */}
       <div className="mt-8 hidden w-full px-12 lg:block lg:px-[60px]">
         <div className="grid w-full grid-cols-5 items-center">

@@ -18,30 +18,30 @@ type CardLayout = {
 };
 
 const cardLayouts: CardLayout[] = [
-  { shape: "left", height: 385 },  // Handyman
-  { shape: "left", height: 395 },  // Restaurants
-  { shape: "left", height: 385 },  // Pools
+  { shape: "left", height: 410 }, // Handyman
+  { shape: "left", height: 420 }, // Restaurants
+  { shape: "left", height: 410 }, // Pools
 
-  { shape: "right", height: 377 }, // Mechanics
-  { shape: "right", height: 393 }, // Pharmacies
+  { shape: "right", height: 402 }, // Mechanics
+  { shape: "right", height: 418 }, // Pharmacies
 
-  { shape: "left", height: 383 },  // Pet Care
-  { shape: "left", height: 389 },  // Delivery
+  { shape: "left", height: 408 }, // Pet Care
+  { shape: "left", height: 414 }, // Delivery
 
-  { shape: "right", height: 379 }, // Tours
-  { shape: "right", height: 389 }, // A/C
+  { shape: "right", height: 404 }, // Tours
+  { shape: "right", height: 414 }, // A/C
 
-  { shape: "left", height: 383 },  // Barbers
+  { shape: "left", height: 408 }, // Barbers
 ];
 
 export function ServiceCard({ category, name, index }: ServiceCardProps) {
   const Icon = category.Icon;
   const clipId = `service-card-${index}`;
 
- const layout = cardLayouts[index] ?? {
-  shape: "left",
-  height: 370,
-};
+  const layout = cardLayouts[index] ?? {
+    shape: "left",
+    height: 395,
+  };
 
   return (
     <Link
@@ -53,16 +53,16 @@ export function ServiceCard({ category, name, index }: ServiceCardProps) {
 
       <article
         className="relative w-full overflow-hidden bg-black"
-       style={{
-  height: `${layout.height}px`,
-  clipPath: `url(#${clipId})`,
-}}
+        style={{
+          height: `${layout.height}px`,
+          clipPath: `url(#${clipId})`,
+        }}
       >
         <Image
           src={category.image}
           alt=""
           fill
-          sizes="(min-width: 1024px) 12vw, 150px"
+          sizes="(min-width: 1536px) 195px, (min-width: 1280px) 185px, (min-width: 1024px) 175px, 160px"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
 

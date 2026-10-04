@@ -39,13 +39,7 @@ export const providers: Provider[] = [
 
     areaId: "potrero",
 
-    serviceAreaIds: [
-      "potrero",
-      "flamingo",
-      "brasilito",
-      "surfside",
-      "huacas",
-    ],
+    serviceAreaIds: ["potrero", "flamingo", "brasilito", "surfside", "huacas"],
 
     location: "Guanacaste",
 
@@ -54,18 +48,12 @@ export const providers: Provider[] = [
     rating: 4.8,
     reviewCount: 24,
 
-    services: [
-      "Diagnostics",
-      "Maintenance",
-      "Repairs",
-    ],
+    services: ["Diagnostics", "Maintenance", "Repairs"],
 
     description:
       "Local automotive service offering diagnostics, preventive maintenance and repairs across the Guanacaste area.",
 
-    gallery: [
-      "/images/providers/mechanics-demo.png",
-    ],
+    gallery: ["/images/providers/mechanics-demo.png"],
 
     businessHours: {
       monday: "8:00 AM – 5:00 PM",
@@ -85,27 +73,25 @@ export const providers: Provider[] = [
     slug: "restaurants-sample",
     name: "Sample Provider",
     categoryId: "restaurants",
-
     areaId: "potrero",
-
-    serviceAreaIds: [
-      "potrero",
-      "surfside",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Local Food",
-      "Lunch",
-      "Dinner",
-    ],
-
+    serviceAreaIds: ["potrero", "surfside"],
+    location: "Potrero, Guanacaste",
+    image: "/images/providers/restaurants-demo.png",
+    rating: 4.7,
+    reviewCount: 18,
+    services: ["Local Food", "Lunch", "Dinner"],
+    description:
+      "Local restaurant serving fresh food in a relaxed Guanacaste atmosphere, with lunch and dinner options for locals and visitors.",
+    gallery: ["/images/providers/restaurants-demo.png"],
+    businessHours: {
+      monday: "11:00 AM – 9:00 PM",
+      tuesday: "11:00 AM – 9:00 PM",
+      wednesday: "11:00 AM – 9:00 PM",
+      thursday: "11:00 AM – 9:00 PM",
+      friday: "11:00 AM – 10:00 PM",
+      saturday: "11:00 AM – 10:00 PM",
+      sunday: "11:00 AM – 9:00 PM",
+    },
     isSample: true,
   },
 
@@ -114,29 +100,25 @@ export const providers: Provider[] = [
     slug: "tours-sample",
     name: "Sample Provider",
     categoryId: "tours",
-
     areaId: "flamingo",
-
-    serviceAreaIds: [
-      "flamingo",
-      "potrero",
-      "brasilito",
-      "las-catalinas",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Tours",
-      "Activities",
-      "Experiences",
-    ],
-
+    serviceAreaIds: ["flamingo", "potrero", "brasilito", "las-catalinas"],
+    location: "Flamingo, Guanacaste",
+    image: "/images/providers/tours-demo.png",
+    rating: 4.9,
+    reviewCount: 31,
+    services: ["Tours", "Activities", "Experiences"],
+    description:
+      "Local tour company offering outdoor activities and experiences across Guanacaste, including ocean, nature and adventure tours.",
+    gallery: ["/images/providers/tours-demo.png"],
+    businessHours: {
+      monday: "8:00 AM – 5:00 PM",
+      tuesday: "8:00 AM – 5:00 PM",
+      wednesday: "8:00 AM – 5:00 PM",
+      thursday: "8:00 AM – 5:00 PM",
+      friday: "8:00 AM – 5:00 PM",
+      saturday: "8:00 AM – 5:00 PM",
+      sunday: "8:00 AM – 4:00 PM",
+    },
     isSample: true,
   },
 
@@ -145,30 +127,25 @@ export const providers: Provider[] = [
     slug: "delivery-sample",
     name: "Sample Provider",
     categoryId: "delivery",
-
     areaId: "potrero",
-
-    serviceAreaIds: [
-      "potrero",
-      "flamingo",
-      "brasilito",
-      "surfside",
-      "huacas",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Delivery",
-      "Courier",
-      "Local Service",
-    ],
-
+    serviceAreaIds: ["potrero", "flamingo", "brasilito", "surfside", "huacas"],
+    location: "Potrero, Guanacaste",
+    image: "/images/providers/delivery-demo.png",
+    rating: 4.8,
+    reviewCount: 22,
+    services: ["Delivery", "Courier", "Local Service"],
+    description:
+      "Local delivery and courier service helping move packages, purchases and everyday items across nearby communities in Guanacaste.",
+    gallery: ["/images/providers/delivery-demo.png"],
+    businessHours: {
+      monday: "8:00 AM – 6:00 PM",
+      tuesday: "8:00 AM – 6:00 PM",
+      wednesday: "8:00 AM – 6:00 PM",
+      thursday: "8:00 AM – 6:00 PM",
+      friday: "8:00 AM – 6:00 PM",
+      saturday: "9:00 AM – 5:00 PM",
+      sunday: "9:00 AM – 2:00 PM",
+    },
     isSample: true,
   },
 
@@ -177,28 +154,25 @@ export const providers: Provider[] = [
     slug: "pharmacies-sample",
     name: "Sample Provider",
     categoryId: "pharmacies",
-
     areaId: "brasilito",
-
-    serviceAreaIds: [
-      "brasilito",
-      "huacas",
-      "flamingo",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Pharmacy",
-      "Personal Care",
-      "Essentials",
-    ],
-
+    serviceAreaIds: ["brasilito", "huacas", "flamingo"],
+    location: "Brasilito, Guanacaste",
+    image: "/images/providers/pharmacy-demo.png",
+    rating: 4.7,
+    reviewCount: 19,
+    services: ["Pharmacy", "Personal Care", "Essentials"],
+    description:
+      "Local pharmacy offering everyday health, personal care and essential products for nearby communities in Guanacaste.",
+    gallery: ["/images/providers/pharmacy-demo.png"],
+    businessHours: {
+      monday: "8:00 AM – 7:00 PM",
+      tuesday: "8:00 AM – 7:00 PM",
+      wednesday: "8:00 AM – 7:00 PM",
+      thursday: "8:00 AM – 7:00 PM",
+      friday: "8:00 AM – 7:00 PM",
+      saturday: "8:00 AM – 6:00 PM",
+      sunday: "9:00 AM – 2:00 PM",
+    },
     isSample: true,
   },
 
@@ -207,30 +181,25 @@ export const providers: Provider[] = [
     slug: "ac-sample",
     name: "Sample Provider",
     categoryId: "ac",
-
     areaId: "huacas",
-
-    serviceAreaIds: [
-      "huacas",
-      "tamarindo",
-      "brasilito",
-      "flamingo",
-      "potrero",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Installation",
-      "Maintenance",
-      "Repair",
-    ],
-
+    serviceAreaIds: ["huacas", "tamarindo", "brasilito", "flamingo", "potrero"],
+    location: "Huacas, Guanacaste",
+    image: "/images/providers/ac-demo.png",
+    rating: 4.8,
+    reviewCount: 27,
+    services: ["Installation", "Maintenance", "Repair"],
+    description:
+      "Local air conditioning service providing installation, preventive maintenance and repairs for homes and businesses across Guanacaste.",
+    gallery: ["/images/providers/ac-demo.png"],
+    businessHours: {
+      monday: "8:00 AM – 5:00 PM",
+      tuesday: "8:00 AM – 5:00 PM",
+      wednesday: "8:00 AM – 5:00 PM",
+      thursday: "8:00 AM – 5:00 PM",
+      friday: "8:00 AM – 5:00 PM",
+      saturday: "8:00 AM – 1:00 PM",
+      sunday: "Closed",
+    },
     isSample: true,
   },
 
@@ -239,29 +208,25 @@ export const providers: Provider[] = [
     slug: "pools-sample",
     name: "Sample Provider",
     categoryId: "pools",
-
     areaId: "potrero",
-
-    serviceAreaIds: [
-      "potrero",
-      "flamingo",
-      "surfside",
-      "las-catalinas",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Cleaning",
-      "Maintenance",
-      "Pool Care",
-    ],
-
+    serviceAreaIds: ["potrero", "flamingo", "surfside", "las-catalinas"],
+    location: "Potrero, Guanacaste",
+    image: "/images/providers/pools-demo.png",
+    rating: 4.9,
+    reviewCount: 21,
+    services: ["Cleaning", "Maintenance", "Pool Care"],
+    description:
+      "Local pool service providing cleaning, routine maintenance and general pool care for homes and properties across Guanacaste.",
+    gallery: ["/images/providers/pools-demo.png"],
+    businessHours: {
+      monday: "8:00 AM – 5:00 PM",
+      tuesday: "8:00 AM – 5:00 PM",
+      wednesday: "8:00 AM – 5:00 PM",
+      thursday: "8:00 AM – 5:00 PM",
+      friday: "8:00 AM – 5:00 PM",
+      saturday: "8:00 AM – 1:00 PM",
+      sunday: "Closed",
+    },
     isSample: true,
   },
 
@@ -270,29 +235,25 @@ export const providers: Provider[] = [
     slug: "handyman-sample",
     name: "Sample Provider",
     categoryId: "handyman",
-
     areaId: "surfside",
-
-    serviceAreaIds: [
-      "surfside",
-      "potrero",
-      "flamingo",
-      "brasilito",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Repairs",
-      "Maintenance",
-      "Installation",
-    ],
-
+    serviceAreaIds: ["surfside", "potrero", "flamingo", "brasilito"],
+    location: "Surfside, Guanacaste",
+    image: "/images/providers/handyman-demo.png",
+    rating: 4.8,
+    reviewCount: 23,
+    services: ["Repairs", "Maintenance", "Installation"],
+    description:
+      "Local handyman service providing home repairs, maintenance and installations for properties across the Guanacaste area.",
+    gallery: ["/images/providers/handyman-demo.png"],
+    businessHours: {
+      monday: "8:00 AM – 5:00 PM",
+      tuesday: "8:00 AM – 5:00 PM",
+      wednesday: "8:00 AM – 5:00 PM",
+      thursday: "8:00 AM – 5:00 PM",
+      friday: "8:00 AM – 5:00 PM",
+      saturday: "8:00 AM – 1:00 PM",
+      sunday: "Closed",
+    },
     isSample: true,
   },
 
@@ -301,26 +262,25 @@ export const providers: Provider[] = [
     slug: "personal-care-sample",
     name: "Sample Provider",
     categoryId: "personalCare",
-
     areaId: "tamarindo",
-
-    serviceAreaIds: [
-      "tamarindo",
-    ],
-
-    location: "Guanacaste",
-
-    image: "/images/providers/provider-placeholder.png",
-
-    rating: 0,
-    reviewCount: 0,
-
-    services: [
-      "Haircuts",
-      "Grooming",
-      "Personal Care",
-    ],
-
+    serviceAreaIds: ["tamarindo", "huacas", "brasilito"],
+    location: "Tamarindo, Guanacaste",
+    image: "/images/providers/barbershop-demo.png",
+    rating: 4.9,
+    reviewCount: 26,
+    services: ["Haircuts", "Grooming", "Personal Care"],
+    description:
+      "Local barbershop offering haircuts, grooming and personal care services in a relaxed and professional atmosphere.",
+    gallery: ["/images/providers/barbershop-demo.png"],
+    businessHours: {
+      monday: "9:00 AM – 6:00 PM",
+      tuesday: "9:00 AM – 6:00 PM",
+      wednesday: "9:00 AM – 6:00 PM",
+      thursday: "9:00 AM – 6:00 PM",
+      friday: "9:00 AM – 7:00 PM",
+      saturday: "9:00 AM – 7:00 PM",
+      sunday: "10:00 AM – 3:00 PM",
+    },
     isSample: true,
   },
 
@@ -332,25 +292,31 @@ export const providers: Provider[] = [
 
     areaId: "huacas",
 
-    serviceAreaIds: [
-      "huacas",
-      "tamarindo",
-      "brasilito",
-      "flamingo",
-    ],
+    serviceAreaIds: ["huacas", "tamarindo", "brasilito", "flamingo"],
 
-    location: "Guanacaste",
+    location: "Huacas, Guanacaste",
 
-    image: "/images/providers/provider-placeholder.png",
+    image: "/images/providers/pet-care-demo.png",
 
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.9,
+    reviewCount: 29,
 
-    services: [
-      "Pet Care",
-      "Pet Supplies",
-      "Veterinary Services",
-    ],
+    services: ["Pet Care", "Pet Supplies", "Veterinary Services"],
+
+    description:
+      "Local pet care and veterinary service offering professional attention, pet essentials and general care for animals across nearby communities in Guanacaste.",
+
+    gallery: ["/images/providers/pet-care-demo.png"],
+
+    businessHours: {
+      monday: "8:00 AM – 5:00 PM",
+      tuesday: "8:00 AM – 5:00 PM",
+      wednesday: "8:00 AM – 5:00 PM",
+      thursday: "8:00 AM – 5:00 PM",
+      friday: "8:00 AM – 5:00 PM",
+      saturday: "8:00 AM – 1:00 PM",
+      sunday: "Closed",
+    },
 
     isSample: true,
   },

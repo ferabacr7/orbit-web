@@ -17,33 +17,29 @@ export function CategoryHeader({
 }: CategoryHeaderProps) {
   return (
     <header className="mx-auto w-full max-w-[1440px] px-6 pb-8 pt-8 lg:px-12 lg:pb-10 lg:pt-10">
-      <nav aria-label="Breadcrumb">
-        <ol className="flex items-center gap-2 text-sm text-black/45">
-          <li>
-            <Link
-              href="/"
-              className="transition-colors hover:text-black"
-            >
-              {homeLabel}
-            </Link>
-          </li>
+      <nav
+        aria-label="Breadcrumb"
+        className="flex items-center gap-2 text-sm text-black/45"
+      >
+        <Link
+          href="/"
+          className="transition-colors duration-200 hover:text-[var(--orbit-orange)]"
+        >
+          {homeLabel}
+        </Link>
 
-          <li aria-hidden="true" className="text-black/25">
-            ›
-          </li>
+        <span aria-hidden="true">›</span>
 
-          <li>
-            <span>{servicesLabel}</span>
-          </li>
+        <Link
+          href="/#services"
+          className="transition-colors duration-200 hover:text-[var(--orbit-orange)]"
+        >
+          {servicesLabel}
+        </Link>
 
-          <li aria-hidden="true" className="text-black/25">
-            ›
-          </li>
+        <span aria-hidden="true">›</span>
 
-          <li aria-current="page" className="text-black/75">
-            {name}
-          </li>
-        </ol>
+        <span className="font-medium text-black">{name}</span>
       </nav>
 
       <div className="mt-10">

@@ -138,7 +138,7 @@ export function Navbar() {
             <p className="orbit-menu-eyebrow">{t("exploreOrbit")}</p>
 
             <nav className="orbit-menu-navigation">
-              <Link href="/services" onClick={() => setMenuOpen(false)}>
+              <Link href="/#services" onClick={() => setMenuOpen(false)}>
                 {t("services")}
               </Link>
 

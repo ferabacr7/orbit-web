@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { ProviderCard } from "@/components/services/ProviderCard";
 import type { Provider } from "@/data/providers";
+import { ProviderPlaceholderCard } from "@/components/services/ProviderPlaceholderCard";
 
 type ProviderGridProps = {
   providers: Provider[];
@@ -53,6 +54,9 @@ export function ProviderGrid({ providers, locale }: ProviderGridProps) {
         {providers.map((provider) => (
           <ProviderCard key={provider.id} provider={provider} locale={locale} />
         ))}
+
+        <ProviderPlaceholderCard locale={locale} />
+        <ProviderPlaceholderCard locale={locale} />
       </div>
     </section>
   );
