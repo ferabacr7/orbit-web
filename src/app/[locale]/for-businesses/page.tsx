@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
+
 import {
   ArrowRight,
   BarChart3,
@@ -400,8 +402,8 @@ export default async function ForBusinessesPage({
 
                 {/* CTA */}
                 <div className="mt-auto pt-8">
-                  <button
-                    type="button"
+                  <Link
+                    href="/for-businesses/apply"
                     className={[
                       "group flex h-[58px] w-full items-center justify-center gap-4 rounded-full",
                       "text-[15px] font-semibold transition-all duration-300",
@@ -414,12 +416,12 @@ export default async function ForBusinessesPage({
 
                     <ArrowRight
                       className="
-                        h-4 w-4
-                        transition-transform duration-300
-                        group-hover:translate-x-1
-                      "
+      h-4 w-4
+      transition-transform duration-300
+      group-hover:translate-x-1
+    "
                     />
-                  </button>
+                  </Link>
 
                   <p className="mx-auto mt-4 max-w-[260px] text-center text-[13px] leading-relaxed text-black/45">
                     {plan.note}
@@ -500,28 +502,28 @@ export default async function ForBusinessesPage({
               </span>
             </div>
 
-            <button
-              type="button"
+            <Link
+              href="/for-businesses/apply"
               className="
-                group mt-8 flex h-[56px] w-fit
-                min-w-[245px] items-center justify-center gap-4
-                rounded-full bg-[#f26a2e]
-                px-7 text-sm font-semibold text-white
-                shadow-[0_14px_30px_rgba(242,106,46,0.2)]
-                transition-all duration-300
-                hover:-translate-y-0.5 hover:bg-[#e85f26]
-              "
+    group mt-8 flex h-[56px] w-fit
+    min-w-[245px] items-center justify-center gap-4
+    rounded-full bg-[#f26a2e]
+    px-7 text-sm font-semibold text-white
+    shadow-[0_14px_30px_rgba(242,106,46,0.2)]
+    transition-all duration-300
+    hover:-translate-y-0.5 hover:bg-[#e85f26]
+  "
             >
               {copy.growth.cta}
 
               <ArrowRight
                 className="
-                  h-4 w-4
-                  transition-transform duration-300
-                  group-hover:translate-x-1
-                "
+      h-4 w-4
+      transition-transform duration-300
+      group-hover:translate-x-1
+    "
               />
-            </button>
+            </Link>
           </div>
 
           {/* Image */}

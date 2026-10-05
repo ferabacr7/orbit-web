@@ -12,6 +12,7 @@
     "guanacaste": "Guanacaste",
     "costaRica": "Costa Rica"
   },
+
   "Hero": {
     "eyebrow": "Local people. Real solutions.",
     "titleLine1": "Guanacaste",
@@ -26,11 +27,13 @@
       "more": "More"
     }
   },
+
   "SearchBar": {
     "inputLabel": "Search local services",
     "placeholder": "What do you need today?",
     "submitLabel": "Search"
   },
+
   "ServiceCategories": {
     "title": "Explore locally",
     "explore": "Explore",
@@ -82,6 +85,7 @@
       }
     }
   },
+
   "CategoryListing": {
     "breadcrumb": {
       "home": "Home",
@@ -122,6 +126,7 @@
       }
     }
   },
+
   "ProviderCTA": {
     "eyebrow": "FOR PROVIDERS",
     "titleLine1": "More visibility.",
@@ -139,6 +144,7 @@
     "statementLine2": "more visible in",
     "statementLine3": "Guanacaste."
   },
+
   "CommunitySection": {
     "latestNews": "Latest News",
     "eyebrow": "MORE THAN A SERVICE",
@@ -164,6 +170,7 @@
       }
     }
   },
+
   "Footer": {
     "homeLabel": "ORBIT home",
     "instagram": "Instagram",
@@ -171,5 +178,147 @@
     "email": "Email",
     "whatsapp": "WhatsApp",
     "location": "Guanacaste, Costa Rica"
+  },
+
+  "ProviderApplication": {
+    "progress": "Step {step} of {total}",
+
+    "step1": {
+      "eyebrow": "Your business",
+      "title": "Tell us about your business.",
+      "description": "Give us the basic information we need to understand what your business does."
+    },
+
+    "step2": {
+      "eyebrow": "Where you work",
+      "title": "Where do you work?",
+      "description": "Tell us where your business is based and which areas you serve."
+    },
+
+    "step3": {
+      "eyebrow": "Contact & verification",
+      "title": "How can we reach you?",
+      "description": "Share the best contact information for the person responsible for this business.",
+      "verificationTitle": "Business presence",
+      "verificationDescription": "These links are optional, but they can help us review and verify your business."
+    },
+
+    "fields": {
+      "businessName": {
+        "label": "Business name",
+        "placeholder": "Example: Pacific Auto Service"
+      },
+
+      "category": {
+        "label": "Category",
+        "placeholder": "Select a category"
+      },
+
+      "description": {
+        "label": "What does your business offer?",
+        "placeholder": "Tell us briefly what services or products your business offers.",
+        "helper": "Minimum 20 characters."
+      },
+
+      "mainArea": {
+        "label": "Main location",
+        "placeholder": "Select an area"
+      },
+
+      "serviceAreas": {
+        "label": "Areas you serve",
+        "description": "Select all the areas where customers can hire your business."
+      },
+
+      "contactName": {
+        "label": "Contact name",
+        "placeholder": "Your full name"
+      },
+
+      "whatsapp": {
+        "label": "WhatsApp",
+        "placeholder": "Example: +506 8888 8888",
+        "helper": "Use a number where ORBIT can contact you about your application."
+      },
+
+      "email": {
+        "label": "Email",
+        "placeholder": "you@business.com"
+      },
+
+      "googleBusinessUrl": {
+        "label": "Google Business Profile (optional)",
+        "placeholder": "https://..."
+      },
+
+      "instagramUrl": {
+        "label": "Instagram (optional)",
+        "placeholder": "https://instagram.com/..."
+      },
+
+      "facebookUrl": {
+        "label": "Facebook (optional)",
+        "placeholder": "https://facebook.com/..."
+      },
+
+      "websiteUrl": {
+        "label": "Website (optional)",
+        "placeholder": "https://..."
+      },
+
+      "photos": {
+        "label": "Business photos",
+        "helper": "Add between 1 and 5 photos that help us understand your business.",
+        "upload": "Choose photos",
+        "formats": "JPG, PNG or WEBP",
+        "count": "{count}/5 photos selected"
+      }
+    },
+
+    "categories": {
+      "mechanics": "Mechanics",
+      "restaurants": "Restaurants",
+      "toursActivities": "Tours & Activities",
+      "delivery": "Delivery",
+      "pharmacies": "Pharmacies",
+      "airConditioning": "Air Conditioning",
+      "pools": "Pools",
+      "handyman": "Handyman",
+      "barbershops": "Barbershops",
+      "petServices": "Pet Services"
+    },
+
+    "actions": {
+      "continue": "Continue",
+      "back": "Back",
+      "remove": "Remove",
+      "submit": "Submit application",
+      "submitting": "Submitting..."
+    },
+
+    "step4": {
+      "eyebrow": "Photos & consent",
+      "title": "Almost there.",
+      "description": "Add a few photos and confirm that we can review and use the information you submitted for your ORBIT application.",
+      "consentTitle": "Before you submit"
+    },
+    "validation": {
+      "step1": "Please complete the business name, category and a description of at least 20 characters.",
+      "step2": "Please select your main location and at least one service area.",
+      "step3": "Please enter your contact name, WhatsApp number and a valid email address.",
+      "step4": "Please add at least one photo and accept all required confirmations before submitting."
+    },
+    "consent": {
+      "authority": "I confirm that I am authorized to submit this business information.",
+      "privacy": "I agree to ORBIT processing the information provided for the purpose of reviewing this application.",
+      "publication": "I authorize ORBIT to publish approved business information, images and contact information if this business is accepted.",
+      "legalNote": "By submitting, you confirm that the information provided is accurate and that you have reviewed ORBIT's Privacy Policy and Terms."
+    },
+    "success": {
+      "eyebrow": "Application received",
+      "title": "Thanks for applying to ORBIT.",
+      "description": "We'll review your business information and contact you using the details you provided.",
+      "founding": "Selected founding businesses may receive 10 weeks of ORBIT Pro free."
+    }
   }
 }

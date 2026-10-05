@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 type CategoryProviderCTAProps = {
   locale: string;
@@ -40,8 +41,8 @@ export function CategoryProviderCTA({ locale }: CategoryProviderCTAProps) {
               ? "Mostrá tus servicios, llegá a más personas y conseguí más oportunidades."
               : "Show your services, reach more people, and get more opportunities."}
           </p>
-          <button
-            type="button"
+          <Link
+            href="/for-businesses/apply"
             className="mt-8 inline-flex min-w-[245px] items-center justify-between rounded-full bg-[var(--orbit-orange)] px-7 py-4 font-semibold text-black transition-transform hover:scale-[1.02]"
           >
             <span>
@@ -51,7 +52,7 @@ export function CategoryProviderCTA({ locale }: CategoryProviderCTAProps) {
             <span aria-hidden="true" className="text-2xl leading-none">
               →
             </span>
-          </button>
+          </Link>
         </div>
         <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[66%] overflow-hidden rounded-r-[28px] lg:block">
           <Image

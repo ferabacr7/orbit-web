@@ -12,6 +12,7 @@
     "guanacaste": "Guanacaste",
     "costaRica": "Costa Rica"
   },
+
   "Hero": {
     "eyebrow": "Gente local. Soluciones reales.",
     "titleLine1": "Guanacaste",
@@ -19,11 +20,13 @@
     "titleHighlight": "un solo lugar.",
     "description": "Encontrá servicios, negocios y experiencias locales de confianza todo cerca de vos."
   },
+
   "SearchBar": {
     "inputLabel": "Buscar servicios locales",
     "placeholder": "¿Qué necesitás hoy?",
     "submitLabel": "Buscar"
   },
+
   "ServiceCategories": {
     "title": "Explorá cerca de vos",
     "explore": "Explorar",
@@ -75,6 +78,7 @@
       }
     }
   },
+
   "CategoryListing": {
     "breadcrumb": {
       "home": "Inicio",
@@ -133,6 +137,7 @@
     "statementLine2": "más visible en",
     "statementLine3": "Guanacaste."
   },
+
   "CommunitySection": {
     "latestNews": "Últimas noticias",
     "eyebrow": "MÁS QUE UN SERVICIO",
@@ -158,6 +163,7 @@
       }
     }
   },
+
   "Footer": {
     "homeLabel": "Inicio de ORBIT",
     "instagram": "Instagram",
@@ -165,5 +171,147 @@
     "email": "Correo electrónico",
     "whatsapp": "WhatsApp",
     "location": "Guanacaste, Costa Rica"
+  },
+
+  "ProviderApplication": {
+    "progress": "Paso {step} de {total}",
+
+    "step1": {
+      "eyebrow": "Tu negocio",
+      "title": "Contanos sobre tu negocio.",
+      "description": "Danos la información básica que necesitamos para entender qué hace tu negocio."
+    },
+
+    "step2": {
+      "eyebrow": "Dónde trabajás",
+      "title": "¿Dónde trabajás?",
+      "description": "Contanos dónde está ubicado tu negocio y en cuáles zonas ofrecés tus servicios."
+    },
+
+    "step3": {
+      "eyebrow": "Contacto y verificación",
+      "title": "¿Cómo podemos contactarte?",
+      "description": "Compartinos los mejores datos de contacto de la persona responsable de este negocio.",
+      "verificationTitle": "Presencia del negocio",
+      "verificationDescription": "Estos enlaces son opcionales, pero pueden ayudarnos a revisar y verificar tu negocio."
+    },
+
+    "fields": {
+      "businessName": {
+        "label": "Nombre del negocio",
+        "placeholder": "Ejemplo: Taller Guanacaste"
+      },
+
+      "category": {
+        "label": "Categoría",
+        "placeholder": "Seleccioná una categoría"
+      },
+
+      "description": {
+        "label": "¿Qué ofrece tu negocio?",
+        "placeholder": "Contanos brevemente qué servicios o productos ofrece tu negocio.",
+        "helper": "Mínimo 20 caracteres."
+      },
+
+      "mainArea": {
+        "label": "Ubicación principal",
+        "placeholder": "Seleccioná una zona"
+      },
+
+      "serviceAreas": {
+        "label": "Zonas donde ofrecés servicio",
+        "description": "Seleccioná todas las zonas donde los clientes pueden contratar tu negocio."
+      },
+
+      "contactName": {
+        "label": "Nombre de contacto",
+        "placeholder": "Tu nombre completo"
+      },
+
+      "whatsapp": {
+        "label": "WhatsApp",
+        "placeholder": "Ejemplo: +506 8888 8888",
+        "helper": "Usá un número donde ORBIT pueda contactarte sobre tu solicitud."
+      },
+
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "vos@negocio.com"
+      },
+
+      "googleBusinessUrl": {
+        "label": "Perfil de Google Business (opcional)",
+        "placeholder": "https://..."
+      },
+
+      "instagramUrl": {
+        "label": "Instagram (opcional)",
+        "placeholder": "https://instagram.com/..."
+      },
+
+      "facebookUrl": {
+        "label": "Facebook (opcional)",
+        "placeholder": "https://facebook.com/..."
+      },
+
+      "websiteUrl": {
+        "label": "Sitio web (opcional)",
+        "placeholder": "https://..."
+      },
+
+      "photos": {
+        "label": "Fotos del negocio",
+        "helper": "Agregá entre 1 y 5 fotos que nos ayuden a conocer tu negocio.",
+        "upload": "Seleccionar fotos",
+        "formats": "JPG, PNG o WEBP",
+        "count": "{count}/5 fotos seleccionadas"
+      }
+    },
+
+    "categories": {
+      "mechanics": "Mecánicos",
+      "restaurants": "Restaurantes",
+      "toursActivities": "Tours y actividades",
+      "delivery": "Repartidores / Courier",
+      "pharmacies": "Farmacias",
+      "airConditioning": "Aire acondicionado",
+      "pools": "Piscinas",
+      "handyman": "Mantenimiento",
+      "barbershops": "Barberías",
+      "petServices": "Servicios para mascotas"
+    },
+
+    "actions": {
+      "continue": "Continuar",
+      "back": "Atrás",
+      "remove": "Eliminar",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando..."
+    },
+
+    "step4": {
+      "eyebrow": "Fotos y consentimiento",
+      "title": "Ya casi terminamos.",
+      "description": "Agregá algunas fotos y confirmá que podemos revisar y utilizar la información enviada para tu solicitud en ORBIT.",
+      "consentTitle": "Antes de enviar"
+    },
+    "validation": {
+      "step1": "Completá el nombre del negocio, la categoría y una descripción de al menos 20 caracteres.",
+      "step2": "Seleccioná la ubicación principal y al menos una zona donde ofrecés servicio.",
+      "step3": "Ingresá el nombre de contacto, número de WhatsApp y un correo electrónico válido.",
+      "step4": "Agregá al menos una foto y aceptá todas las confirmaciones requeridas antes de enviar."
+    },
+    "consent": {
+      "authority": "Confirmo que estoy autorizado para enviar la información de este negocio.",
+      "privacy": "Acepto que ORBIT procese la información proporcionada con el propósito de revisar esta solicitud.",
+      "publication": "Autorizo a ORBIT a publicar la información, imágenes y datos de contacto aprobados si este negocio es aceptado.",
+      "legalNote": "Al enviar la solicitud, confirmás que la información proporcionada es correcta y que revisaste la Política de Privacidad y los Términos de ORBIT."
+    },
+    "success": {
+      "eyebrow": "Solicitud recibida",
+      "title": "Gracias por aplicar a ORBIT.",
+      "description": "Vamos a revisar la información de tu negocio y te contactaremos utilizando los datos que proporcionaste.",
+      "founding": "Los negocios fundadores seleccionados podrán recibir 10 semanas de ORBIT Pro gratis."
+    }
   }
 }

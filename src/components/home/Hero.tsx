@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
+import { HeroQuickFilters } from "@/components/home/HeroQuickFilters";
 import { SearchBar } from "@/components/ui/SearchBar";
 
 type HeroProps = {
@@ -23,29 +24,6 @@ export async function Hero({ locale }: HeroProps) {
     locale === "es"
       ? "/images/hero/orbit-pro-offer-es.png"
       : "/images/hero/orbit-pro-offer-en.png";
-
-  const quickFilters = [
-    {
-      label: locale === "es" ? "Restaurantes" : "Restaurants",
-      slug: "restaurants",
-    },
-    {
-      label: locale === "es" ? "Mecánica" : "Mechanics",
-      slug: "mechanics",
-    },
-    {
-      label: "Tours",
-      slug: "tours-activities",
-    },
-    {
-      label: locale === "es" ? "Farmacias" : "Pharmacies",
-      slug: "pharmacies",
-    },
-    {
-      label: locale === "es" ? "Más" : "More",
-      slug: "more",
-    },
-  ];
 
   return (
     <section
@@ -236,51 +214,7 @@ export async function Hero({ locale }: HeroProps) {
         >
           <SearchBar />
 
-          {/* QUICK FILTERS */}
-          <div
-            className="
-              mt-3
-              flex
-              w-full
-              gap-2
-              overflow-x-auto
-              pb-1
-              [scrollbar-width:none]
-              [&::-webkit-scrollbar]:hidden
-
-              md:flex-nowrap
-md:overflow-visible              lg:pb-0
-            "
-          >
-            {quickFilters.map((filter) => (
-              <button
-                key={filter.slug}
-                type="button"
-                className="
-                  shrink-0
-                  rounded-full
-                  border
-                  border-black/[0.06]
-                  bg-[#e3e3e1]/80
-                  px-4
-                  py-[7px]
-                  text-[11px]
-                  font-medium
-                  text-[#4a4a48]
-                  shadow-[inset_0_1px_0_rgba(255,255,255,0.55)]
-                  backdrop-blur-md
-                  transition-all
-                  duration-200
-                  hover:border-black/[0.10]
-                  hover:bg-[#d9d9d7]/90
-                  hover:text-black
-                  hover:shadow-[0_5px_16px_rgba(0,0,0,0.07)]
-                "
-              >
-                {filter.label}
-              </button>
-            ))}
-          </div>
+          <HeroQuickFilters locale={locale} />
         </div>
       </div>
 
